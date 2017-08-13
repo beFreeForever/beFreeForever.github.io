@@ -5,6 +5,8 @@
         <blockquote> Делать рассылку по подписавшимся пользователям </blockquote>
         <blockquote> Писать личное сообщение выбранному пользователю </blockquote>
         <blockquote> Смотреть историю переписки с пользователями </blockquote>
+        <blockquote> Смотреть историю переписки с пользователями </blockquote>
+        <blockquote> Смотреть историю переписки с пользователями </blockquote>
     </div>
 </template>
 <script>
