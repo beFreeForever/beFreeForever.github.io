@@ -95,27 +95,96 @@
             background-image: url('./static/images/07.jpg');
             background-size: cover;
         }
+
+        #return-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.7);
+            width: 50px;
+            height: 50px;
+            display: block;
+            text-decoration: none;
+            -webkit-border-radius: 35px;
+            -moz-border-radius: 35px;
+            border-radius: 35px;
+            display: none;
+            -webkit-transition: all 0.3s linear;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            z-index: 10000;
+        }
+
+        #return-to-top i {
+            color: #fff;
+            margin: 0;
+            position: relative;
+            left: 16px;
+            top: 13px;
+            font-size: 19px;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        #return-to-top:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        #return-to-top:hover i {
+            color: #fff;
+            top: 5px;
+        }
     </style>
 </head>
 
 <body>
-    <!-- <div class="navbar-fixed ">
-        <nav class="transparent">
-            <div class="nav-wrapper">
-                <ul id="nav-mobile" class="center-align hide-on-med-and-down">
-                    <li>
-                        <a href="">Sass</a>
+    <a href="javascript:" id="return-to-top">
+        <!-- <i class="icon-chevron-up"></i> -->
+        <i class="material-icons">
+            expand less
+        </i>
+    </a>
+    <div class="navbar-fixed">
+        <nav class="black center">
+            <div class="nav-wrapper brand-logo center">
+                <ul id="nav-mobile" class="hide-on-med-and-down">
+                    <!-- <li class="">
+                        <a href="#detailing">Детейлинг</a>
+                    </li> -->
+                    <li class="">
+                        <a href="#projectIntellect">Проект Intellect</a>
                     </li>
-                    <li>
-                        <a href="">Components</a>
+                    <!-- <li class="">
+                        <a href="#forWhom">Для кого</a>
+                    </li> -->
+                    <li class="">
+                        <a href="#benefits">Преимущества</a>
                     </li>
-                    <li>
-                        <a href="">JavaScript</a>
+                    <!-- <li class="">
+                        <a href="#idea">Цели проекта</a>
+                    </li> -->
+                    <li class="">
+                        <a href="#scheduleDescription">О курсе</a>
+                    </li>
+                    <li class="">
+                        <a href="#schedule">Программа курса</a>
+                    </li>
+                    <li class="">
+                        <a href="#mentor">Преподаватель</a>
+                    </li>
+                    <li class="">
+                        <a href="#buy">Записаться</a>
                     </li>
                 </ul>
             </div>
         </nav>
-    </div> -->
+    </div>
     <div class="section logo">
         <div class="container">
             <div class="row">
@@ -128,9 +197,9 @@
     </div>
 
     <div>
-        <div class="parallax-container about-image">
+        <div class="parallax-container about-image" id="detailing">
             <div style="background-color: rgba(0, 0, 0, 0.65);">
-                <div class="container section" id="detailing">
+                <div class="container section">
                     <div class="white-text">
                         <h1 class="center">Детейлинг</h1>
                         <p class="flow-text">
@@ -144,6 +213,7 @@
                 </div>
             </div>
         </div>
+
         <div class="divider"></div>
         <div class="section" id="projectIntellect">
             <div class="container">
@@ -273,8 +343,9 @@
                 </div>
             </div>
         </div>
+
         <div class="divider"></div>
-        <div class="parallax-container interested-curs-image">
+        <div class="parallax-container interested-curs-image" id="forWhom">
             <div style="background-color: rgba(0, 0, 0, 0.5);">
                 <div class="container section white-text">
                     <h3 class="center">Кому будет интересен курс:</h3>
@@ -288,7 +359,7 @@
         </div>
 
         <div class="divider"></div>
-        <div class="container">
+        <div class="container" id="benefits">
             <br>
             <div class="valign-wrapper">
                 <div class="row">
@@ -332,19 +403,18 @@
             </div>
         </div>
 
-
         <div class="divider"></div>
-        <div class="parallax-container idea-image">
+        <div class="parallax-container idea-image" id="idea">
             <div style="background-color: rgba(0, 0, 0, 0.7);">
                 <div class="container section flow-text white-text">
-                    <div id="idea">
+                    <div>
                         <h2 class="center">Основная идея обучающего проекта Intellect</h2>
                         <p>
                             Создание единого центра и общего канала поддержки и развития специалистов из разных уровней и направлений в сфере ухода за
                             автомобилем для достижения наилучшего качества обслуживания и наивысшей степени лояльности клиентов
                         </p>
                     </div>
-                    <div id="">
+                    <div>
                         <h3 class="center">Цели проекта</h3>
                         <div class="row">
                             <div class="valign-wrapper">
@@ -372,8 +442,8 @@
         </div>
         <div class="divider"></div>
         <!-- <div class="section grey lighten-3"> -->
-        <div class="section">
-            <div class="container section center flow-text" id="scheduleDescription">
+        <div class="section" id="scheduleDescription">
+            <div class="container section center flow-text">
                 <h2>Курс детейлинга от Intellect</h2>
                 <div class="container left-align">
                     <ul>
@@ -407,9 +477,9 @@
             </div>
         </div>
         <div class="divider"></div>
-        <div class="parallax-container programm-image" >
+        <div class="parallax-container programm-image" id="schedule">
             <div style="background-color: rgba(0, 0, 0, 0.7);">
-                <div class="container section white-text" id="schedule">
+                <div class="container section white-text">
                     <div class="row">
                         <div class="col s12" style="border-bottom: 2px solid white;">
                             <!-- <h2 class="center">Программа курса</h2> -->
@@ -583,7 +653,7 @@
             </div>
         </div>
         <div class="divider"></div>
-        <div class="section black">
+        <div class="section black" id="mentor">
             <div class="container">
                 <div class="row">
                     <div class="col s12 m6 l6">
@@ -679,6 +749,22 @@
     </footer>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <script>
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function () {
+            if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function () {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop: 0                       // Scroll to top of body
+            }, 500);
+        });
+    </script>
     <script>
         $(document).ready(function () {
             $('.parallax').parallax();
