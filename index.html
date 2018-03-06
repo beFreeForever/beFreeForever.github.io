@@ -21,6 +21,7 @@
         } */
 
         .image-logo {
+            /* background-image: url('./static/logo720.png'); */
             background-image: url('./static/logo720.png');
             background-repeat: no-repeat;
             background-size: contain;
@@ -48,8 +49,51 @@
             border-style: dotted;
         }
 
+        .rhombus {
+            list-style-image: url('./static/rhombus.svg');
+        }
+
         .red {
             color: red;
+        }
+
+        /* .modal.open {
+            width: 90%;
+            max-height: 100%;
+            height: 100%;
+            top: 0 !important;
+        } */
+
+        .clicable {
+            cursor: pointer;
+        }
+
+        .project-intellect-image {
+            height: 300px
+        }
+
+        .project-image-orientation {
+            image-orientation: 6.4deg
+        }
+
+        .about-image {
+            background-image: url('./static/images/parallax0.jpg');
+            background-size: cover;
+        }
+
+        .interested-curs-image {
+            background-image: url(' ./static/images/parallax2.jpg');
+            background-size: cover;
+        }
+
+        .idea-image {
+            background-image: url('./static/images/parallax3.jpg');
+            background-size: cover;
+        }
+
+        .programm-image {
+            background-image: url('./static/images/07.jpg');
+            background-size: cover;
         }
     </style>
 </head>
@@ -84,64 +128,162 @@
     </div>
 
     <div>
-        <div class="parallax-container" style="background-color: rgba(0, 0, 0, 0.65);">
-            <div class="container section" id="detailing">
-                <div class="white-text">
-                    <h1 class="center">Детейлинг</h1>
-                    <p class="flow-text">
-                        Детейлинг – это премиальный уровень оказания полного комплекса услуг по уходу за интерьером, экстерьером и начинкой автомобиля!
-                        Это процесс тщательной ревизии и обработки автомобиля снаружи, внутри и в двигательном отсеке, включающий
-                        в себя его очистку, коррекцию нуждающихся в этом элементов, последующую защиту и консервацию результатов
-                        работы при долговременном использовании. Грамотно проведенный детейлинг может значительно повысить
-                        рыночную стоимость авто, статус автовладельца и количество восторженных взглядов!
-                    </p>
-                </div>
-            </div>
-            <div class="parallax">
-                <img src="./static/images/parallax0.jpg">
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="container" id="projectIntellect">
-            <div class="black-text">
-                <h1 class="center">Что такое проект Intellect?</h1>
-                <div class="flow-text">
-                    <p>
-                        Студия автодетейлинга Intellect – это уникальная студия в Нижнем Новгороде, специалисты которой знают, как нужно ухаживать
-                        за автомобилем. Иные студии автодетейлинга в Нижнем Новгороде, на сегодняшний день, представляют
-                        собой всего два крупных центра, что для такого мегаполиса существенно мало
-                    </p>
-                    <p>
-                        Популярность этого бизнеса быстро растет, а следовательно, появляются новые молодые компании. Поэтому важно стартовать именно
-                        сейчас!
-                    </p>
-                    <p>
-                        Пик спроса на услуги специалистов автодетейлинга систематически приходится на весенний период, когда подготовка машины к
-                        летнему сезону актуальна
-                    </p>
-                    <p>
-                        Intellect - проект, заключающий в себе наш многолетний опыт и знания в сфере ухода за авто. Мы расскажем, покажем и обучим
-                        тому, какой должна быть система комплексного и грамотного ухода за автомобилем!
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="parallax-container" style="background-color: rgba(0, 0, 0, 0.5);">
-            <div class="container white-text">
-                <h3 class="center">Кому будет интересен курс:</h3>
-                <div class="flow-text center">
-                    <p>Желающим овладеть новой профессией</p>
-                    <p>Начинающим детейлерам</p>
-                    <p>Сотрудникам предприятий автобизнеса</p>
-                </div>
-                <!-- <div class="row flow-text">
-                    <div class="col offset-s3">
+        <div class="parallax-container about-image">
+            <div style="background-color: rgba(0, 0, 0, 0.65);">
+                <div class="container section" id="detailing">
+                    <div class="white-text">
+                        <h1 class="center">Детейлинг</h1>
+                        <p class="flow-text">
+                            Детейлинг – это премиальный уровень оказания полного комплекса услуг по уходу за интерьером, экстерьером и начинкой автомобиля!
+                            Это процесс тщательной ревизии и обработки автомобиля снаружи, внутри и в двигательном отсеке,
+                            включающий в себя его очистку, коррекцию нуждающихся в этом элементов, последующую защиту и консервацию
+                            результатов работы при долговременном использовании. Грамотно проведенный детейлинг может значительно
+                            повысить рыночную стоимость авто, статус автовладельца и количество восторженных взглядов!
+                        </p>
                     </div>
-                </div> -->
+                </div>
             </div>
-            <div class="parallax">
-                <img src="./static/images/parallax2.jpg">
+        </div>
+        <div class="divider"></div>
+        <div class="section" id="projectIntellect">
+            <div class="container">
+                <div class="black-text">
+                    <h1 class="center">Что такое проект Intellect?</h1>
+                    <div class="flow-text">
+                        <p>
+                            Студия автодетейлинга Intellect – это уникальная студия в Нижнем Новгороде, специалисты которой знают, как нужно ухаживать
+                            за автомобилем. Иные студии автодетейлинга в Нижнем Новгороде, на сегодняшний день, представляют
+                            собой всего два крупных центра, что для такого мегаполиса существенно мало
+                        </p>
+                        <p>
+                            Популярность этого бизнеса быстро растет, а следовательно, появляются новые молодые компании. Поэтому важно стартовать именно
+                            сейчас!
+                        </p>
+                        <p>
+                            Пик спроса на услуги специалистов автодетейлинга систематически приходится на весенний период, когда подготовка машины к
+                            летнему сезону актуальна
+                        </p>
+                        <p>
+                            Intellect - проект, заключающий в себе наш многолетний опыт и знания в сфере ухода за авто. Мы расскажем, покажем и обучим
+                            тому, какой должна быть система комплексного и грамотного ухода за автомобилем!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col s4 clicable">
+                        <div class="card " onclick="$('#modal1').modal('open');">
+                            <div class="card-image project-intellect-image">
+                                <img src="./static/images/project/1.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s4 clicable">
+                        <div class="card" onclick="$('#modal2').modal('open');">
+                            <div class="card-image project-intellect-image">
+                                <img src="./static/images/project/2.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s4 clicable">
+                        <div class="card " onclick="$('#modal3').modal('open');">
+                            <div class="card-image project-intellect-image">
+                                <img class="project-image-orientation" src="./static/images/project/3.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s4 clicable">
+                        <div class="card" onclick="$('#modal4').modal('open');">
+                            <div class="card-image">
+                                <img src="./static/images/project/4.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s4 clicable">
+                        <div class="card" onclick="$('#modal5').modal('open');">
+                            <div class="card-image">
+                                <img src="./static/images/project/5.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s4 clicable">
+                        <div class="card" onclick="$('#modal6').modal('open');">
+                            <div class="card-image">
+                                <img src="./static/images/project/6.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="./static/images/project/1.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="modal2" class="modal">
+                        <div class="modal-content">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="./static/images/project/2.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="modal3" class="modal">
+                        <div class="modal-content">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="./static/images/project/3.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="modal4" class="modal">
+                        <div class="modal-content">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="./static/images/project/4.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="modal5" class="modal">
+                        <div class="modal-content">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="./static/images/project/5.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="modal6" class="modal">
+                        <div class="modal-content">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="./static/images/project/6.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="parallax-container interested-curs-image">
+            <div style="background-color: rgba(0, 0, 0, 0.5);">
+                <div class="container section white-text">
+                    <h3 class="center">Кому будет интересен курс:</h3>
+                    <div class="flow-text center">
+                        <p>Желающим овладеть новой профессией</p>
+                        <p>Начинающим детейлерам</p>
+                        <p>Сотрудникам предприятий автобизнеса</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -153,10 +295,10 @@
                     <div class="col s12 m4 l4">
                         <h3>Наглядно</h3>
                         <ul>
-                            <li class="red" style="list-style-type: square;">
+                            <li class="rhombus">
                                 <p class="black-text white">В нашем курсе теория не расходится с практикой. Знания и их внедрение ускоряют процесс понимания</p>
                             </li>
-                            <li class="red" style="list-style-type: square;">
+                            <li class="rhombus">
                                 <p class="black-text white">Практике уделяется до 85% времени</p>
                             </li>
                         </ul>
@@ -164,13 +306,13 @@
                     <div class="col s12 m4 l4">
                         <h3>Без отрыва</h3>
                         <ul>
-                            <li class="red" style="list-style-type: square;">
+                            <li class="rhombus">
                                 <p class="black-text white">Курс создан с учётом всех тонкостей детейлинга как перспективного направления</p>
                             </li>
-                            <li class="red" style="list-style-type: square;">
+                            <li class="rhombus">
                                 <p class="black-text white">Охватывает как базовые моменты, так и частности</p>
                             </li>
-                            <li class="red" style="list-style-type: square;">
+                            <li class="rhombus">
                                 <p class="black-text white">Идеально подходит для повышения квалификации без отрыва от работы</p>
                             </li>
                         </ul>
@@ -178,10 +320,10 @@
                     <div class="col s12 m4 l4">
                         <h3>Перспективно</h3>
                         <ul>
-                            <li class="red" style="list-style-type: square;">
+                            <li class="rhombus">
                                 <p class="black-text white">Детейлер-молодая и востребованная профессия</p>
                             </li>
-                            <li class="red" style="list-style-type: square;">
+                            <li class="rhombus">
                                 <p class="black-text white">Мы рады талантливым людям. Лучшие выпускники получают работу в Intellect!</p>
                             </li>
                         </ul>
@@ -192,235 +334,252 @@
 
 
         <div class="divider"></div>
-        <div class="parallax-container" style="background-color: rgba(0, 0, 0, 0.7);">
-            <div class="container section flow-text white-text">
-                <div id="idea">
-                    <h2 class="center">Основная идея обучающего проекта Intellect</h2>
-                    <p>
-                        Создание единого центра и общего канала поддержки и развития специалистов из разных уровней и направлений в сфере ухода за
-                        автомобилем для достижения наилучшего качества обслуживания и наивысшей степени лояльности клиентов
-                    </p>
-                </div>
-                <div id="">
-                    <h3 class="center">Цели проекта</h3>
-                    <div>
+        <div class="parallax-container idea-image">
+            <div style="background-color: rgba(0, 0, 0, 0.7);">
+                <div class="container section flow-text white-text">
+                    <div id="idea">
+                        <h2 class="center">Основная идея обучающего проекта Intellect</h2>
                         <p>
-                            <i class="material-icons">check</i>
-                            Представление нашей базы стандартов и правил комплексного ухода за авто
+                            Создание единого центра и общего канала поддержки и развития специалистов из разных уровней и направлений в сфере ухода за
+                            автомобилем для достижения наилучшего качества обслуживания и наивысшей степени лояльности клиентов
                         </p>
-                        <p>
-                            <i class="material-icons">check</i>
-                            Создание и взращивание действительно крутых и грамотных специалистов в сфере детейлинга по всей России
-                        </p>
-                        <p>
-                            <i class="material-icons">check</i>
-                            Продвижение детейлинга и пропаганды трепетного отношения к своему железному коню
-                        </p>
+                    </div>
+                    <div id="">
+                        <h3 class="center">Цели проекта</h3>
+                        <div class="row">
+                            <div class="valign-wrapper">
+                                <i class="material-icons col">check</i>
+                                <p class="col s12">
+                                    Представление нашей базы стандартов и правил комплексного ухода за авто
+                                </p>
+                            </div>
+                            <div class="valign-wrapper">
+                                <i class="material-icons col">check</i>
+                                <p class="col s12">
+                                    Создание и взращивание действительно крутых и грамотных специалистов в сфере детейлинга по всей России
+                                </p>
+                            </div>
+                            <div class="valign-wrapper">
+                                <i class="material-icons col">check</i>
+                                <p class="col s12">
+                                    Продвижение детейлинга и пропаганды трепетного отношения к своему железному коню
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="parallax">
-                <img src="./static/images/parallax3.jpg">
-            </div>
         </div>
         <div class="divider"></div>
+        <!-- <div class="section grey lighten-3"> -->
         <div class="section">
             <div class="container section center flow-text" id="scheduleDescription">
                 <h2>Курс детейлинга от Intellect</h2>
                 <div class="container left-align">
-                    <p>
-                        Теоретические и практические основы детейлинга.
-                    </p>
-                    <p>
-                        Организация рабочего места.
-                    </p>
-                    <p>
-                        Ввод в профессию детейлера.
-                    </p>
-                    <p>
-                        Основные услуги: прием автомобиля и презентация выполненных работ.
-                    </p>
-                    <p>
-                        Базовый на пять дней по четыре-пять часов и группу до шести человек.
-                    </p>
+                    <ul>
+                        <li style="list-style-type: circle;">
+                            <p>
+                                Теоретические и практические основы детейлинга.
+                            </p>
+                        </li>
+                        <li style="list-style-type: circle;">
+                            <p>
+                                Организация рабочего места.
+                            </p>
+                        </li>
+                        <li style="list-style-type: circle;">
+                            <p>
+                                Ввод в профессию детейлера.
+                            </p>
+                        </li>
+                        <li style="list-style-type: circle;">
+                            <p>
+                                Основные услуги: прием автомобиля и презентация выполненных работ.
+                            </p>
+                        </li>
+                        <li style="list-style-type: circle;">
+                            <p>
+                                Базовый на пять дней по четыре-пять часов и группу до шести человек.
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
         <div class="divider"></div>
-        <div class="parallax-container" style="background-color: rgba(0, 0, 0, 0.7);">
-            <div class="container section white-text" id="schedule">
-                <div class="row">
-                    <div class="col s12" style="border-bottom: 2px solid white;">
-                        <!-- <h2 class="center">Программа курса</h2> -->
-                        <h2 class="center">ПРОГРАММА КУРСА</h2>
+        <div class="parallax-container programm-image" >
+            <div style="background-color: rgba(0, 0, 0, 0.7);">
+                <div class="container section white-text" id="schedule">
+                    <div class="row">
+                        <div class="col s12" style="border-bottom: 2px solid white;">
+                            <!-- <h2 class="center">Программа курса</h2> -->
+                            <h2 class="center">ПРОГРАММА КУРСА</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m4 l4">
+                            <h4>
+                                День 1:
+                            </h4>
+                            <ul>
+                                <li style="list-style-type: square;">
+                                    Продолжительность обучения: 4 часа
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Знакомство с программой, структурой обучения и регламентом
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Этапы работы с клиентом, основные услуги и расчет стоимости услуг. Работа с прайсо
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Приемка автомобиля – правила, заполнение заказ наряда
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Детейлинг мойка теория и практика – двухфазная мойка
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Удаление сложных загрязнений с ЛКП. Подбор составов
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col s12 m4 l4">
+                            <h4>
+                                День 2:
+                            </h4>
+                            <ul class="">
+                                <li style="list-style-type: square;">
+                                    Продолжительность обучения: 5 часов
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Тестирование по пройденному материалу
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Теория полировки, основные виды полировки, знакомство с оборудованием и расходным материалами, технологией и видами лако
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Глубокая очистка ЛКП
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Работа с автоскрабом,глиной. Нюансы в использовании
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Диагностика состояния лака измерительным прибором. Секреты проверки
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Методы подбора полировальных машинок и паст
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Подбор осветительных приборов
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Практика восстановительной полировки. Нанесение простых защитных составов
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col s12 m4 l4">
+                            <h4>
+                                День 3:
+                            </h4>
+                            <ul class="">
+                                <li style="list-style-type: square;">
+                                    Продолжительность обучения: 5 часов
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Тестирование по пройденному материалу
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Теория химчистки, знакомство с оборудованием и расходным материалами, технологией, элементами экстерьера и правилами работы
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Структура этапов работы
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Удаление трудных пятен с пластика, кожи, текстиля и др.
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Секреты работы с наппой и алькантарой
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Нюансы работы с салонами премиальных авто
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Практическая часть, удаление простых загрязнений всеми типами оборудования с разных Элементов салона. Правила сбора и разбора
+                                    салона.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m4 l4">
+                            <h4>
+                                День 4:
+                            </h4>
+                            <ul class="">
+                                <li style="list-style-type: square;">
+                                    Продолжительность обучения: 5 часов
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Тестирование по пройденному материалу
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Обзор дополнительных услуг и варианты подключения на аутсорс
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Нанесение защитных составов на элементы экстерьера и интерьера. Подробный разбор различий материалов. Типы и практика применения.
+                                    Подготовка, правила нанесения и выдерживания материалов
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Обзор керамических покрытий, жидкого стекла. Правила нанесения и технологии
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Практика – закрепление полученных знаний
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col s12 m4 l4">
+                            <h4>
+                                День 5:
+                            </h4>
+                            <ul class="">
+                                <li style="list-style-type: square;">
+                                    Продолжительность обучения: 5 часов
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Тестирование по пройденному материалу
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Открытие студии. Определение самых маржинальных услуг
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Создание списка закупки. Самые необходимые материалы и оборудование
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Старт студии. Необходимые вложения и направления в продвижении.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col s12 m4 l4">
+                            <h4>
+                                Вручение сертификатов
+                                <!-- об окончании курса участникам -->
+                            </h4>
+                            <ul class="">
+                                <li style="list-style-type: square;">
+                                    Тестирование по пройденному материалу
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Открытие студии. Определение самых маржинальных услуг
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Создание списка закупки. Самые необходимые материалы и оборудование
+                                </li>
+                                <li style="list-style-type: square;">
+                                    Старт студии. Необходимые вложения и направления в продвижении.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col s12 m4 l4">
-                        <h4>
-                            День 1:
-                        </h4>
-                        <ul>
-                            <li style="list-style-type: square;">
-                                Продолжительность обучения: 4 часа
-                            </li>
-                            <li style="list-style-type: square;">
-                                Знакомство с программой, структурой обучения и регламентом
-                            </li>
-                            <li style="list-style-type: square;">
-                                Этапы работы с клиентом, основные услуги и расчет стоимости услуг. Работа с прайсо
-                            </li>
-                            <li style="list-style-type: square;">
-                                Приемка автомобиля – правила, заполнение заказ наряда
-                            </li>
-                            <li style="list-style-type: square;">
-                                Детейлинг мойка теория и практика – двухфазная мойка
-                            </li>
-                            <li style="list-style-type: square;">
-                                Удаление сложных загрязнений с ЛКП. Подбор составов
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h4>
-                            День 2:
-                        </h4>
-                        <ul class="">
-                            <li style="list-style-type: square;">
-                                Продолжительность обучения: 5 часов
-                            </li>
-                            <li style="list-style-type: square;">
-                                Тестирование по пройденному материалу
-                            </li>
-                            <li style="list-style-type: square;">
-                                Теория полировки, основные виды полировки, знакомство с оборудованием и расходным материалами, технологией и видами лако
-                            </li>
-                            <li style="list-style-type: square;">
-                                Глубокая очистка ЛКП
-                            </li>
-                            <li style="list-style-type: square;">
-                                Работа с автоскрабом,глиной. Нюансы в использовании
-                            </li>
-                            <li style="list-style-type: square;">
-                                Диагностика состояния лака измерительным прибором. Секреты проверки
-                            </li>
-                            <li style="list-style-type: square;">
-                                Методы подбора полировальных машинок и паст
-                            </li>
-                            <li style="list-style-type: square;">
-                                Подбор осветительных приборов
-                            </li>
-                            <li style="list-style-type: square;">
-                                Практика восстановительной полировки. Нанесение простых защитных составов
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h4>
-                            День 3:
-                        </h4>
-                        <ul class="">
-                            <li style="list-style-type: square;">
-                                Продолжительность обучения: 5 часов
-                            </li>
-                            <li style="list-style-type: square;">
-                                Тестирование по пройденному материалу
-                            </li>
-                            <li style="list-style-type: square;">
-                                Теория химчистки, знакомство с оборудованием и расходным материалами, технологией, элементами экстерьера и правилами работы
-                            </li>
-                            <li style="list-style-type: square;">
-                                Структура этапов работы
-                            </li>
-                            <li style="list-style-type: square;">
-                                Удаление трудных пятен с пластика, кожи, текстиля и др.
-                            </li>
-                            <li style="list-style-type: square;">
-                                Секреты работы с наппой и алькантарой
-                            </li>
-                            <li style="list-style-type: square;">
-                                Нюансы работы с салонами премиальных авто
-                            </li>
-                            <li style="list-style-type: square;">
-                                Практическая часть, удаление простых загрязнений всеми типами оборудования с разных Элементов салона. Правила сбора и разбора
-                                салона.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m4 l4">
-                        <h4>
-                            День 4:
-                        </h4>
-                        <ul class="">
-                            <li style="list-style-type: square;">
-                                Продолжительность обучения: 5 часов
-                            </li>
-                            <li style="list-style-type: square;">
-                                Тестирование по пройденному материалу
-                            </li>
-                            <li style="list-style-type: square;">
-                                Обзор дополнительных услуг и варианты подключения на аутсорс
-                            </li>
-                            <li style="list-style-type: square;">
-                                Нанесение защитных составов на элементы экстерьера и интерьера. Подробный разбор различий материалов. Типы и практика применения.
-                                Подготовка, правила нанесения и выдерживания материалов
-                            </li>
-                            <li style="list-style-type: square;">
-                                Обзор керамических покрытий, жидкого стекла. Правила нанесения и технологии
-                            </li>
-                            <li style="list-style-type: square;">
-                                Практика – закрепление полученных знаний
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h4>
-                            День 5:
-                        </h4>
-                        <ul class="">
-                            <li style="list-style-type: square;">
-                                Продолжительность обучения: 5 часов
-                            </li>
-                            <li style="list-style-type: square;">
-                                Тестирование по пройденному материалу
-                            </li>
-                            <li style="list-style-type: square;">
-                                Открытие студии. Определение самых маржинальных услуг
-                            </li>
-                            <li style="list-style-type: square;">
-                                Создание списка закупки. Самые необходимые материалы и оборудование
-                            </li>
-                            <li style="list-style-type: square;">
-                                Старт студии. Необходимые вложения и направления в продвижении.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h4>
-                            Вручение сертификатов
-                            <!-- об окончании курса участникам -->
-                        </h4>
-                        <ul class="">
-                            <li style="list-style-type: square;">
-                                Тестирование по пройденному материалу
-                            </li>
-                            <li style="list-style-type: square;">
-                                Открытие студии. Определение самых маржинальных услуг
-                            </li>
-                            <li style="list-style-type: square;">
-                                Создание списка закупки. Самые необходимые материалы и оборудование
-                            </li>
-                            <li style="list-style-type: square;">
-                                Старт студии. Необходимые вложения и направления в продвижении.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="parallax">
-                <img src="./static/images/07.jpg">
             </div>
         </div>
         <div class="divider"></div>
@@ -526,6 +685,10 @@
         });
         $(document).ready(function () {
             $('.scrollspy').scrollSpy();
+        });
+        $(document).ready(function () {
+            // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
         });
     </script>
 </body>
