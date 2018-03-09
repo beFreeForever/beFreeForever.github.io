@@ -727,7 +727,7 @@
                             <p>Основатель детейлинг студии "Intellect"</p>
                             <p>И просто человек, знающий весь процесс и все секреты этого дела!</p>
                         </div>
-                        <p class="right">"Детейлниг - это не процесс ухода. Это - искусство общения с автомобилем!"</p>
+                        <p class="right">"Детейлинг - это не процесс ухода. Это - искусство общения с автомобилем!"</p>
                     </div>
                 </div>
             </div>
@@ -763,32 +763,35 @@
                             <div class="col s12 m6 l6">
                                 <form id="newOrderForm" method="post">
                                     <div class="input-field">
-                                        <label>Имя</label>
+                                        <label>Имя *</label>
                                         <input class="validate" type="text" name="from_name" />
                                     </div>
                                     <div class="input-field">
-                                        <label>Email</label>
-                                        <input class="validate" type="text" name="email" />
+                                        <label for="email" data-error="Неверный формат" data-success="Введено без ошибок">Email *</label>
+                                        <input id="email" class="validate" type="email" name="email" />
                                     </div>
                                     <div class="input-field">
-                                        <label>Телефон</label>
-                                        <input class="validate" type="text" name="phone" />
+                                        <label for="phone" data-error="Неверный формат" data-success="Введено без ошибок">Телефон *</label>
+                                        <input class="validate" type="text" name="phone" id="phone" />
                                     </div>
                                     <br>
                                     <br>
                                     <button class="left btn black">
                                         Записаться
                                     </button>
+                                </form>
                             </div>
-                            </form>
+                            <div class="col s12 m6 l6">
+                                <div class="flow-text left">
+                                    <p>Записаться на курс и узнать подробнее можно по этой форме</p>
+                                    <p>Павел Кочутов ответит на все ваши вопросы и обучит детейлингу</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-
     </div>
     <footer class="page-footer" id="feedback">
         <div class="container">
@@ -850,7 +853,8 @@
     </footer>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <script src="https://unpkg.com/sweetalert2@7.15.1/dist/sweetalert2.all.js"></script> -->
     <script>
         // ===== Scroll to Top ==== 
         $(window).scroll(function () {
@@ -890,9 +894,9 @@
     </script>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function () {
-            emailjs.init("user_oi5T0poz7ybLiJFlkukgm");
-        })();
+            (function () {
+                emailjs.init("user_oi5T0poz7ybLiJFlkukgm");
+            })();
     </script>
 
 
@@ -905,15 +909,43 @@
             var service_id = "default_service";
             var template_id = "new_order";
 
+            if (myform.find('input[name="from_name"]').val().length === 0) {
+                return false;
+                // alert('Имя не должно быть пустым');
+            }
+
+            if (myform.find('input[name="email"]').val().length === 0) {
+                return false;
+                // alert('Email не должен быть пустым');
+            }
+            if (myform.find('input[name="email"]').val().indexOf('@') === -1) {
+                return false;
+                // alert('В Email нет символа @');
+            }
+            if (myform.find('input[name="email"]').val().split('@')[1].length === 0) {
+                return false;
+                // alert('В Email нет названия почты');
+            }
+
+            if (myform.find('input[name="phone"]').val().length === 0) {
+                return false;
+            }
+
+            // return false;
             myform.find("button").text("Отправка...");
             emailjs.sendForm(service_id, template_id, "newOrderForm")
                 .then(function () {
-                    alert("Sent!");
+                    Materialize.toast('Заявка успешно оставлена', 4000, 'green')
                     myform.find("button").text("Записаться");
                 }, function (err) {
-                    alert("Произошла ошибка, попробуйте ещё раз или проверьте сеть");
+                    Materialize.toast('Произошла ошибка, попробуйте ещё раз или проверьте сеть', 4000, 'red')
                     myform.find("button").text("Записаться");
                 });
+
+            myform.find('input[name="from_name"]').text = '';
+            myform.find('input[name="email"]').text = '';
+            myform.find('input[name="phone"]').text = '';
+            $('#buyModal').modal('close');
             return false;
         });</script>
 </body>
