@@ -12,6 +12,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
     <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .pin-top {
+            position: relative;
+        }
+
+        .pin-bottom {
+            position: relative;
+        }
+
+        .pinned {
+            position: fixed !important;
+        }
+
         #return-to-top {
             position: fixed;
             bottom: 20px;
@@ -56,6 +73,80 @@
             color: #fff;
             top: 5px;
         }
+
+        .master-image {
+            background-image: url('./static/master.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+
+        .class-name {
+            margin: 0px;
+            padding: 0px;
+            float: left;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            left: 50%;
+        }
+
+        .bottom {
+            margin: 0px;
+            padding: 0px;
+            float: left;
+            width: 100%;
+            position: absolute;
+            top: 93%;
+            transform: translateY(-50%) translateX(-50%);
+            left: 100%;
+        }
+
+        /* #to-shopping {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.7);
+            width: 50px;
+            height: 50px;
+            display: block;
+            text-decoration: none;
+            -webkit-border-radius: 35px;
+            -moz-border-radius: 35px;
+            border-radius: 35px;
+            display: none;
+            -webkit-transition: all 0.3s linear;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            z-index: 10000;
+        }
+
+        #to-shopping i {
+            color: #fff;
+            margin: 0;
+            position: relative;
+            left: 16px;
+            top: 13px;
+            font-size: 19px;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        #to-shopping:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        #to-shopping:hover i {
+            color: #fff;
+            top: 5px;
+        } */
     </style>
 </head>
 
@@ -66,51 +157,76 @@
         </i>
     </a>
 
-
-    <div class="navbar-fixed hide-on-med-and-down">
-        <nav>
-            <div class="nav-wrapper white">
-                <div class="row center">
-                    <a href="#lavash" class="black-text col s2">Шаурма в лаваше</a>
-                    <a href="#lepeshka" class="black-text col s2">Шаурма в лепешке</a>
-                    <a href="#shashlyk" class="black-text col s2">Шашлык</a>
-                    <a href="#ovoschi-grill" class="black-text col s2">Овощи гриль</a>
-                    <a href="#sousy" class="black-text col s2">Соусы</a>
-                    <a href="#dostavka" class="black-text col s2">Доставка и оплата</a>
+    <!-- nav-bar -->
+    <div>
+        <div class="navbar-fixed hide-on-med-and-down">
+            <nav>
+                <div class="nav-wrapper white">
+                    <div class="row center">
+                        <a href="#lavash" class="black-text col s2">Шаурма в лаваше</a>
+                        <a href="#lepeshka" class="black-text col s2">Шаурма в лепешке</a>
+                        <a href="#shashlyk" class="black-text col s2">Шашлык</a>
+                        <a href="#ovoschi-grill" class="black-text col s2">Овощи гриль</a>
+                        <a href="#sousy" class="black-text col s2">Соусы</a>
+                        <a href="#dostavka" class="black-text col s2">Доставка и оплата</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <nav class="white hide-on-large-only">
+            <div class="navbar-text">
+                <ul id="slide-out" class="side-nav">
+                    <li>
+                        <a href="#lavash" class="scrollLink">Шаурма в лаваше</a>
+                    </li>
+                    <li>
+                        <a href="#lepeshka" class="scrollLink">Шаурма в лепешке</a>
+                    </li>
+                    <li>
+                        <a href="#shashlyk" class="scrollLink">Шашлык</a>
+                    </li>
+                    <li>
+                        <a href="#ovoschi-grill" class="scrollLink">Овощи гриль</a>
+                    </li>
+                    <li>
+                        <a href="#sousy" class="scrollLink">Соусы</a>
+                    </li>
+                    <li>
+                        <a href="#dostavka" class="scrollLink">Доставка и оплата</a>
+                    </li>
+                </ul>
+                <div class="container">
+                    <a data-activates="slide-out" class="button-collapse">
+                        <i class="material-icons black-text">menu</i>
+                    </a>
+                    <a class="brand-logo black-text">Донерхана</a>
                 </div>
             </div>
         </nav>
     </div>
-    <nav class="white">
-        <div class="navbar-text hide-on-large-only">
-            <ul id="slide-out" class="side-nav">
-                <li>
-                    <a href="#lavash" class="scrollLink">Шаурма в лаваше</a>
-                </li>
-                <li>
-                    <a href="#lepeshka" class="scrollLink">Шаурма в лепешке</a>
-                </li>
-                <li>
-                    <a href="#shashlyk" class="scrollLink">Шашлык</a>
-                </li>
-                <li>
-                    <a href="#ovoschi-grill" class="scrollLink">Овощи гриль</a>
-                </li>
-                <li>
-                    <a href="#sousy" class="scrollLink">Соусы</a>
-                </li>
-                <li>
-                    <a href="#dostavka" class="scrollLink">Доставка и оплата</a>
-                </li>
-            </ul>
-            <div class="container">
-                <a data-activates="slide-out" class="button-collapse">
-                    <i class="material-icons black-text">menu</i>
-                </a>
-                <a class="brand-logo black-text">Донерхана</a>
+
+    <div class="master-image hide-on-small-only">
+        <div class="container">
+            <div class="container white-text center master-text class-name" style="background-color: rgba(0, 0, 0, 0.7)">
+                <div>
+                    <h1 class="center white-text hide-on-med-and-down">Донерхана</h1>
+                    <h3 class="center white-text hide-on-large-only">Донерхана</h3>
+                    <p class="flow-text">
+                        Доставка шаурмы и шашлыка в Нижнем Новгороде
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s3 offset-s4 bottom center">
+                    <a href="#lavash">
+                        <i class="material-icons white-text">
+                            arrow_downward
+                        </i>
+                    </a>
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
 
     <div id="lavash" class="scrollspy">
         <div class="section deep-orange lighten-1">
@@ -380,6 +496,17 @@
                 scrollTop: 0                       // Scroll to top of body
             }, 500);
         });
+    </script>
+    <script>
+        // function scrollToAnchor(aid) {
+        //     var aTag = $("a[name='" + aid + "']");
+        //     $('html,body').animate({ scrollTop: aTag.offset().top }, 'slow');
+        // }
+
+        // $('#to-shopping').click(function (event) {      // When arrow is clicked
+        //     event.preventDefault();
+        //     scrollToAnchor('lavash')
+        // });
     </script>
     <script>
         $(".button-collapse").sideNav({ closeOnClick: true });
