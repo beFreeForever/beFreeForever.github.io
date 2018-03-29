@@ -16,112 +16,305 @@
         body {
             height: 100%;
         }
-
-        .pin-top {
-            position: relative;
-        }
-
-
-        .pin-bottom {
-            position: relative;
-        }
-
-
-        .pinned {
-            position: fixed !important;
-        }
-
-        .block {
-            height: 100%;
-        }
-
-        .divider {
-            height: 50px;
-        }
     </style>
 </head>
 
 <body>
-    <div id="blue" class="block blue">
-        <nav class="pushpin-demo-nav pinned" data-target="blue" style="top: 0px;">
-            <div class="nav-wrapper light-blue">
-                <div class="container">
-                    <a href="#" class="brand-logo">Blue</a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li>
-                            <a href="#!">Blue Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Blue Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Blue Link 3</a>
-                        </li>
-                    </ul>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper white">
+                <div class="row center hide-on-med-and-down">
+                    <a href="#lavash" class="black-text col s2">Шаурма в лаваше</a>
+                    <a href="#lepeshka" class="black-text col s2">Шаурма в лепешке</a>
+                    <a href="#shashlyk" class="black-text col s2">Шашлык</a>
+                    <a href="#ovoschi-grill" class="black-text col s2">Овощи гриль</a>
+                    <a href="#sousy" class="black-text col s2">Соусы</a>
+                    <a href="#dostavka" class="black-text col s2">Доставка и оплата</a>
                 </div>
+                <!-- <ul class="row center hide-on-med-and-down">
+                    <li class="col s2">
+                        <a href="sass.html" class="black-text">Шаурма в лаваше</a>
+                    </li>
+                    <li class="col s2">
+                        <a href="badges.html" class="black-text">Шаурма в лепешке</a>
+                    </li>
+                    <li class="col s2">
+                        <a href="sass.html" class="black-text">Шашлык</a>
+                    </li>
+                    <li class="col s2">
+                        <a href="badges.html" class="black-text">Овощи гриль</a>
+                    </li>
+                    <li class="col s2">
+                        <a href="sass.html" class="black-text">Соусы</a>
+                    </li>
+                    <li class="col s2">
+                        <a href="badges.html" class="black-text">Доставка и оплата</a>
+                    </li>
+                </ul> -->
             </div>
         </nav>
-        <div class="divider"></div>
-        <div class="row">
-            <div class="col l12 m12 s12">
-                <h1 class="center">HELLO, WORLD</h1>
+    </div>
+
+    <div id="lavash" class="scrollspy">
+        <div class="section deep-orange lighten-1">
+            <h2 class="center">ШАУРМА В ЛАВАШЕ</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/1.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div class="center">
+                                <h3>Шаурма с курицей</h3>
+                                <p class="flow-text">90 р.</p>
+                            </div>
+                        </div>
+                        <div class="card-action center">
+                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/2.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div class="center">
+                                <h3>Шаурма со свининой</h3>
+                                <p class="flow-text">100 р.</p>
+                            </div>
+                        </div>
+                        <div class="card-action center">
+                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div id="red" class="block red lighten-1">
-        <nav class="pushpin-demo-nav pin-top" data-target="red" style="top: 0px;">
-            <div class="nav-wrapper red">
-                <div class="container">
-                    <a href="#" class="brand-logo">Red</a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li>
-                            <a href="#!">Red Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Red Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Red Link 3</a>
-                        </li>
-                    </ul>
+
+    <div id="lepeshka" class="section scrollspy">
+        <div class="section deep-orange lighten-1">
+            <h2 class="center">ШАУРМА В ЛЕПЁШКЕ</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/3.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div class="center">
+                                <h3>Шаурма с курицей</h3>
+                                <p class="flow-text">90 р.</p>
+                            </div>
+                        </div>
+                        <div class="card-action center">
+                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/4.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div class="center">
+                                <h3>Шаурма со свининой</h3>
+                                <p class="flow-text">100 р.</p>
+                            </div>
+                        </div>
+                        <div class="card-action center">
+                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
     </div>
-    <div id="green" class="block green lighten-1">
-        <nav class="pushpin-demo-nav pin-top" data-target="green" style="top: 0px;">
-            <div class="nav-wrapper green">
-                <div class="container">
-                    <a href="#" class="brand-logo">Green</a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li>
-                            <a href="#!">Green Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Green Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Green Link 3</a>
-                        </li>
-                    </ul>
+
+    <div id="shashlyk" class="section scrollspy">
+        <div class="section deep-orange lighten-1">
+            <h2 class="center">ШАШЛЫК</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/5.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div class="center">
+                                <h3>Шашлык из курицы (1 порция - 100 гр)</h3>
+                                <p class="flow-text">80 р.</p>
+                            </div>
+                        </div>
+                        <div class="card-action center">
+                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/6.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div class="center">
+                                <h3>Шашлык из свиной шейки (1 порция - 100 гр)</h3>
+                                <p class="flow-text">90р..</p>
+                            </div>
+                        </div>
+                        <div class="card-action center">
+                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/7.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div class="center">
+                                <h3>Люля-кебаб из свинины (1 порция - 100 гр)</h3>
+                                <p class="flow-text">80 р.</p>
+                            </div>
+                        </div>
+                        <div class="card-action center">
+                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/8.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div class="center">
+                                <h3>Куриные крылышки (1 порция - 100 гр)</h3>
+                                <p class="flow-text">90 р.</p>
+                            </div>
+                        </div>
+                        <div class="card-action center">
+                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </div>
+    <div id="ovoschi-grill" class="section scrollspy">
+        <div class="section deep-orange lighten-1">
+            <h2 class="center">ОВОЩИ ГРИЛЬ</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/9.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div class="center">
+                                <h3>Картофель на шампуре</h3>
+                                <p class="flow-text">60 р.</p>
+                            </div>
+                        </div>
+                        <div class="card-action center">
+                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/10.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div class="center">
+                                <h3>Грибы на шампуре</h3>
+                                <p class="flow-text">120 р.</p>
+                            </div>
+                        </div>
+                        <div class="card-action center">
+                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sousy" class="section scrollspy">
+        <div class="section deep-orange lighten-1">
+            <h2 class="center">СОУСЫ</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l6 offset-m3 offset-l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="static/9.jpg">
+                        </div>
+                        <div class="card-content">
+                            <div class="center">
+                                <h3>Соус "Шашлычный"</h3>
+                                <p class="flow-text">25 р.</p>
+                            </div>
+                        </div>
+                        <div class="card-action center">
+                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dostavka" class="section scrollspy grey lighten-3">
+        <div class="container center">
+            <div class="row">
+                <div class="col s12 m8 l6 offset-m2 offset-l3">
+                    <h3>ДОСТАВКА</h3>
+                    <p class="flow-text">При заказе от 500 рублей доставка по Ленинскому и Автозаводскому районам -
+                        <b>бесплатно
+                            <b>
+                    </p>
+                    <p class="flow-text">Цена на доставку заказов ниже 500 рублей составляет
+                        <b>200 рублей</b>
+                    </p>
+                </div>
+                <div class="col s12 m8 l6 offset-m2 offset-l3">
+                    <h3>ОПЛАТА</h3>
+                    <p class="flow-text">Оплатить заказ можно
+                        <b>двумя</b> способами:
+                    </p>
+                    <div class="container left-align">
+                        <ul class="flow-text">
+                            <li style="list-style-type: circle;">Безналичный расчёт по карте</li>
+                            <li style="list-style-type: circle;">Оплата наличными при доставке</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('.pushpin-demo-nav').each(function () {
-                var $this = $(this);
-                var $target = $('#' + $(this).attr('data-target'));
-                $this.pushpin({
-                    top: $target.offset().top,
-                    bottom: $target.offset().top + $target.outerHeight() - $this.height()
-                });
-            });
+            $('.scrollspy').scrollSpy();
         });
+
     </script>
 </body>
 
