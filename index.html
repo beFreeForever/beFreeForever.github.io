@@ -1,1019 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Intellect</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Донерхана</title>
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="./static/stylesheet.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="./static/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon-16x16.png">
-    <link rel="manifest" href="./static/site.webmanifest">
-    <link rel="mask-icon" href="./static/safari-pinned-tab.svg" color="#000000">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="theme-color" content="#ffffff">
+
     <style>
-        html {
-            font-family: Helvetica, sans-serif
+        html,
+        body {
+            height: 100%;
         }
 
-        /* .text {
-            font-family: "Trebuchet MS", sans-serif;
-            font-variant: normal;
-        } */
-
-        .navbar-text {
-            text-transform: uppercase;
-            color: black;
-        }
-
-        .image-logo {
-            background-image: url('./static/Logo720.png');
-            background-repeat: no-repeat;
-            background-size: contain;
-            height: 234px;
-        }
-
-        .logo {
-            background-color: black;
-        }
-
-        .vertical-divider {
-            clear: both;
+        .pin-top {
             position: relative;
         }
 
-        .page-footer {
-            background-color: black;
+
+        .pin-bottom {
+            position: relative;
         }
 
-        .parallax-container {
-            height: auto;
+
+        .pinned {
+            position: fixed !important;
         }
 
-        .border {
-            border-style: dotted;
+        .block {
+            height: 100%;
         }
 
-        .rhombus {
-            list-style-image: url('./static/rhombus.svg');
-        }
-
-        .red {
-            color: red;
-        }
-
-        .clicable {
-            cursor: pointer;
-        }
-
-        .project-image-orientation {
-            image-orientation: 6.4deg
-        }
-
-        .about-image {
-            background-image: url('./static/images/parallax0.jpg');
-            background-size: cover;
-            background-position-y: 45%;
-        }
-
-        .interested-curs-image {
-            background-image: url(' ./static/images/parallax2.jpg');
-            background-size: cover;
-            background-position-y: 45%;
-        }
-
-        .idea-image {
-            background-image: url('./static/images/parallax3.jpg');
-            background-size: cover;
-        }
-
-        .programm-image {
-            background-image: url('./static/images/07.jpg');
-            background-size: cover;
-        }
-
-        #return-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: rgb(0, 0, 0);
-            background: rgba(0, 0, 0, 0.7);
-            width: 50px;
+        .divider {
             height: 50px;
-            display: block;
-            text-decoration: none;
-            -webkit-border-radius: 35px;
-            -moz-border-radius: 35px;
-            border-radius: 35px;
-            display: none;
-            -webkit-transition: all 0.3s linear;
-            -moz-transition: all 0.3s ease;
-            -ms-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-            z-index: 10000;
-        }
-
-        #return-to-top i {
-            color: #fff;
-            margin: 0;
-            position: relative;
-            left: 16px;
-            top: 13px;
-            font-size: 19px;
-            -webkit-transition: all 0.3s ease;
-            -moz-transition: all 0.3s ease;
-            -ms-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-        }
-
-        #return-to-top:hover {
-            background: rgba(0, 0, 0, 0.9);
-        }
-
-        #return-to-top:hover i {
-            color: #fff;
-            top: 5px;
-        }
-
-        /* body {
-            padding: 0 !important
-        } */
-
-        .image-logo2 {
-            background-image: url('./static/Logo720.png');
-            background-size: contain;
-            background-repeat: no-repeat;
         }
     </style>
 </head>
 
 <body>
-    <a href="javascript:" id="return-to-top">
-        <i class="material-icons">
-            navigation
-        </i>
-    </a>
-
-    <div class="section black" id="logo">
-        <div class="container">
-            <div class="row">
-                <br>
-                <br>
-                <div class="col m8 l6 s10 offset-s1 offset-m2 offset-l3">
-                    <div class="card black">
-                        <div class="card-image">
-                            <img src="./static/Logo720.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="navbar-text hide-on-med-and-down center">
-            <ul class="row">
-                <li class="col s2">
-                    <a href="#projectIntellect" class="scrollLink white-text">Проект Intellect</a>
-                </li>
-                <li class="col s2">
-                    <a href="#forWhom" class="scrollLink white-text">О курсе</a>
-                </li>
-                <li class="col s2">
-                    <a href="#benefits" class="scrollLink white-text">Преимущества</a>
-                </li>
-                <li class="col s2">
-                    <a href="#schedule" class="scrollLink white-text">Программа обучения</a>
-                </li>
-                <li class="col s2">
-                    <a href="#buy" class="scrollLink white-text">Записаться</a>
-                </li>
-                <li class="col s2">
-                    <a href="#feedback" class="scrollLink white-text">Обратная связь</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div>
-        <div class="navbar-text hide-on-large-only black">
-            <ul id="slide-out" class="side-nav">
-                <li>
-                    <a href="#projectIntellect" class="scrollLink">Проект Intellect</a>
-                </li>
-                <li>
-                    <a href="#forWhom" class="scrollLink">О курсе</a>
-                </li>
-                <li>
-                    <a href="#benefits" class="scrollLink">Преимущества</a>
-                </li>
-                <li>
-                    <a href="#schedule" class="scrollLink">Программа обучения</a>
-                </li>
-                <li>
-                    <a href="#buy" class="scrollLink">Записаться</a>
-                </li>
-                <li>
-                    <a href="#feedback" class="scrollLink">Обратная связь</a>
-                </li>
-            </ul>
-            <div class="container">
-                <a data-activates="slide-out" class="button-collapse">
-                    <i class="material-icons" class="white">menu</i>
-                </a>
-                <br>
-                <br>
-            </div>
-        </div>
-    </div>
-
-
-    <div class=" about-image" id="detailing">
-        <div style="background-color: rgba(0, 0, 0, 0.65);">
-            <div class="container section">
-                <div class="white-text">
-                    <h2 class="center white-text hide-on-med-and-down">Детейлинг</h2>
-                    <h4 class="center white-text hide-on-large-only">Детейлинг</h4>
-                    <p class="flow-text">
-                        Детейлинг – это премиальный уровень оказания полного комплекса услуг по уходу за интерьером, экстерьером и начинкой автомобиля!
-                        Это процесс тщательной ревизии и обработки автомобиля снаружи, в салоне и в двигательном отсеке.
-                        Детейлинг включает в себя очистку и коррекцию элементов кузова, салона и двигателя, а также последующую
-                        защиту и консервацию результатов работы при долговременном использовании. Грамотно проведенный детейлинг
-                        может значительно повысить рыночную стоимость авто, статус автовладельца и количество восторженных
-                        взглядов!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="divider"></div>
-    <div class="section" id="projectIntellect">
-        <div class="container">
-            <div class="black-text">
-                <h2 class="center hide-on-med-and-down">Что такое проект Intellect?</h2>
-                <h4 class="center hide-on-large-only">Что такое проект Intellect?</h4>
-                <div class="flow-text">
-                    <p>
-                        Студия автодетейлинга Intellect – это уникальная студия в Нижнем Новгороде. Наши специалисты знают, как нужно ухаживать за
-                        автомобилем. На сегодняшний день иные студии автодетейлинга в Нижнем Новгороде представляют собой
-                        всего два крупных центра, что для такого мегаполиса существенно мало
-                    </p>
-                    <p>
-                        Популярность этого бизнеса быстро растет, а следовательно, появляются новые молодые компании. Поэтому важно стартовать именно
-                        сейчас!
-                    </p>
-                    <p>
-                        Пик спроса на услуги специалистов автодетейлинга систематически приходится на весенний период, когда подготовка машины к
-                        летнему сезону особенно актуальна
-                    </p>
-                    <p>
-                        Intellect - проект, заключающий в себе наш многолетний опыт и знания в сфере ухода за авто. Мы расскажем, покажем и обучим
-                        тому, какой должна быть система комплексного и грамотного ухода за автомобилем!
-                    </p>
-                    <p>
-                        Здесь не существует оценок «нормально» или «хорошо». Должно быть идеально!
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row hide-on-med-and-down">
-                <div class="col s12 m4 l4 clicable">
-                    <div class="card " onclick="$('#modal1').modal('open');">
-                        <div class="card-image">
-                            <img src="./static/images/project/1.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4 clicable">
-                    <div class="card" onclick="$('#modal2').modal('open');">
-                        <div class="card-image project-intellect-image">
-                            <img src="./static/images/project/2.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4 clicable">
-                    <div class="card " onclick="$('#modal3').modal('open');">
-                        <div class="card-image project-intellect-image">
-                            <img class="" src="./static/images/project/3.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4 clicable">
-                    <div class="card" onclick="$('#modal4').modal('open');">
-                        <div class="card-image">
-                            <img src="./static/images/project/4.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4 clicable">
-                    <div class="card" onclick="$('#modal5').modal('open');">
-                        <div class="card-image">
-                            <img src="./static/images/project/5.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4 clicable">
-                    <div class="card" onclick="$('#modal6').modal('open');">
-                        <div class="card-image">
-                            <img src="./static/images/project/6.jpg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hide-on-large-only">
-                <div class="col s12 m4 l4">
-                    <div class="card ">
-                        <div class="card-image">
-                            <img src="./static/images/project/1.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image project-intellect-image">
-                            <img src="./static/images/project/2.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card ">
-                        <div class="card-image project-intellect-image">
-                            <img src="./static/images/project/3.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./static/images/project/4.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./static/images/project/5.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./static/images/project/6.jpg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div id="modal1" class="card modal" style="overflow-y: hidden;">
-                    <div class="card-image">
-                        <img src="./static/images/project/1.jpg">
-                    </div>
-                </div>
-                <div id="modal2" class="card modal" style="overflow-y: hidden;">
-                    <div class="card-image">
-                        <img src="./static/images/project/2.jpg">
-                    </div>
-                </div>
-                <div id="modal3" class="card modal" style="overflow-y: hidden;">
-                    <div class="card-image">
-                        <img src="./static/images/project/3.jpg">
-                    </div>
-                </div>
-                <div id="modal4" class="card modal" style="overflow-y: hidden;">
-                    <div class="card-image">
-                        <img src="./static/images/project/4.jpg">
-                    </div>
-                </div>
-                <div id="modal5" class="card modal" style="overflow-y: hidden;">
-                    <div class="card-image">
-                        <img src="./static/images/project/5.jpg">
-                    </div>
-                </div>
-                <div id="modal6" class="card modal" style="overflow-y: hidden;">
-                    <div class="card-image">
-                        <img src="./static/images/project/6.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="divider"></div>
-    <div class="parallax-container interested-curs-image" id="forWhom">
-        <div style="background-color: rgba(0, 0, 0, 0.5);">
-            <div class="container section white-text">
-                <h2 class="center hide-on-med-and-down">Кому будет интересен курс: </h2>
-                <h4 class="center hide-on-large-only">Кому будет интересен курс:</h4>
-                <div class="flow-text center">
-                    <p>Желающим овладеть новой профессией</p>
-                    <p>Начинающим детейлерам</p>
-                    <p>Сотрудникам предприятий автобизнеса</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="divider"></div>
-    <div class="container" id="benefits">
-        <div class="section black-text">
-            <div class="row">
-                <div class="col s12 m4 l4">
-                    <h3 class="hide-on-med-and-down">Наглядно</h3>
-                    <h4 class="hide-on-large-only center">Наглядно</h4>
-                    <ul>
-                        <li class="rhombus">
-                            <p class="black-text white">В нашем курсе теория не расходится с практикой. Знания и их внедрение ускоряют процесс понимания</p>
-                        </li>
-                        <li class="rhombus">
-                            <p class="black-text white">Практике уделяется до 85% времени</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col s12 m4 l4">
-                    <h3 class="hide-on-med-and-down">Без отрыва</h3>
-                    <h4 class="hide-on-large-only center">Без отрыва</h4>
-                    <ul>
-                        <li class="rhombus">
-                            <p class="black-text white">Курс создан с учётом всех тонкостей детейлинга как перспективного направления</p>
-                        </li>
-                        <li class="rhombus">
-                            <p class="black-text white">Охватывает как базовые моменты, так и частности</p>
-                        </li>
-                        <li class="rhombus">
-                            <p class="black-text white">Идеально подходит для повышения квалификации без отрыва от работы</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col s12 m4 l4">
-                    <h3 class="hide-on-med-and-down">Перспективно</h3>
-                    <h4 class="hide-on-large-only center">Перспективно</h4>
-                    <ul>
-                        <li class="rhombus">
-                            <p class="black-text white">Детейлер-молодая и востребованная профессия</p>
-                        </li>
-                        <li class="rhombus">
-                            <p class="black-text white">Мы рады талантливым людям. Лучшие выпускники получают работу в Intellect!</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="divider"></div>
-    <div class="parallax-container idea-image" id="idea">
-        <div style="background-color: rgba(0, 0, 0, 0.7);">
-            <div class="container section flow-text white-text">
-                <div>
-                    <h3 class="center white-text hide-on-med-and-down">Основная идея обучающего проекта Intellect</h2>
-                        <h4 class="center white-text hide-on-large-only">Основная идея обучающего проекта Intellect</h4>
-                        <p>
-                            Создание единого центра и общего канала поддержки и развития специалистов из разных направлений в сфере ухода за автомобилем
-                            для достижения наилучшего качества обслуживания и наивысшей степени лояльности клиентов
-                        </p>
-                </div>
-                <div>
-                    <h3 class="center white-text hide-on-med-and-down">Цели проекта</h3>
-                    <h4 class="center white-text hide-on-large-only">Цели проекта</h4>
-                    <div class="row">
-                        <div class="valign-wrapper">
-                            <i class="material-icons col">check</i>
-                            <p class="col s12">
-                                Представление нашей базы стандартов и правил комплексного ухода за авто
-                            </p>
-                        </div>
-                        <div class="valign-wrapper">
-                            <i class="material-icons col">check</i>
-                            <p class="col s12">
-                                Создание и взращивание действительно крутых и грамотных специалистов в сфере детейлинга по всей России
-                            </p>
-                        </div>
-                        <div class="valign-wrapper">
-                            <i class="material-icons col">check</i>
-                            <p class="col s12">
-                                Продвижение детейлинга и пропаганды трепетного отношения к своему железному коню
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="divider"></div>
-    <div class="section" id="scheduleDescription">
-        <div class="container section center flow-text">
-            <h2 class="hide-on-med-and-down">Курс детейлинга от Intellect</h2>
-            <h4 class="hide-on-large-only">Курс детейлинга от Intellect</h4>
-            <div class="container left-align">
-                <ul>
-                    <li style="list-style-type: circle;">
-                        <p>
-                            Теоретические и практические основы детейлинга.
-                        </p>
-                    </li>
-                    <li style="list-style-type: circle;">
-                        <p>
-                            Организация рабочего места.
-                        </p>
-                    </li>
-                    <li style="list-style-type: circle;">
-                        <p>
-                            Ввод в профессию детейлера.
-                        </p>
-                    </li>
-                    <li style="list-style-type: circle;">
-                        <p>
-                            Основные услуги: прием автомобиля и презентация выполненных работ.
-                        </p>
-                    </li>
-                    <li style="list-style-type: circle;">
-                        <p>
-                            Базовый курс на пять дней по четыре-пять часов и группу до шести человек
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="divider"></div>
-    <div class="parallax-container programm-image" id="schedule">
-        <div style="background-color: rgba(0, 0, 0, 0.7);">
-            <div class="container section white-text">
-                <div class="row">
-                    <div class="col s12" style="border-bottom: 2px solid white;">
-                        <h2 class="center white-text hide-on-med-and-down">ПРОГРАММА КУРСА</h2>
-                        <h4 class="center white-text hide-on-large-only">ПРОГРАММА КУРСА</h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m4 l4">
-                        <h4>
-                            День 1:
-                        </h4>
-                        <ul>
-                            <li style="list-style-type: square;">
-                                Продолжительность обучения: 4 часа
-                            </li>
-                            <li style="list-style-type: square;">
-                                Знакомство с программой, структурой обучения и регламентом
-                            </li>
-                            <li style="list-style-type: square;">
-                                Этапы работы с клиентом, основные услуги и расчет стоимости услуг. Работа с прайсо
-                            </li>
-                            <li style="list-style-type: square;">
-                                Приемка автомобиля – правила, заполнение заказ наряда
-                            </li>
-                            <li style="list-style-type: square;">
-                                Детейлинг мойка теория и практика – двухфазная мойка
-                            </li>
-                            <li style="list-style-type: square;">
-                                Удаление сложных загрязнений с ЛКП. Подбор составов
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h4>
-                            День 2:
-                        </h4>
-                        <ul class="">
-                            <li style="list-style-type: square;">
-                                Продолжительность обучения: 5 часов
-                            </li>
-                            <li style="list-style-type: square;">
-                                Тестирование по пройденному материалу
-                            </li>
-                            <li style="list-style-type: square;">
-                                Теория полировки, основные виды полировки, знакомство с оборудованием и расходным материалами, технологией и видами лако
-                            </li>
-                            <li style="list-style-type: square;">
-                                Глубокая очистка ЛКП
-                            </li>
-                            <li style="list-style-type: square;">
-                                Работа с автоскрабом,глиной. Нюансы в использовании
-                            </li>
-                            <li style="list-style-type: square;">
-                                Диагностика состояния лака измерительным прибором. Секреты проверки
-                            </li>
-                            <li style="list-style-type: square;">
-                                Методы подбора полировальных машинок и паст
-                            </li>
-                            <li style="list-style-type: square;">
-                                Подбор осветительных приборов
-                            </li>
-                            <li style="list-style-type: square;">
-                                Практика восстановительной полировки. Нанесение простых защитных составов
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h4>
-                            День 3:
-                        </h4>
-                        <ul class="">
-                            <li style="list-style-type: square;">
-                                Продолжительность обучения: 5 часов
-                            </li>
-                            <li style="list-style-type: square;">
-                                Тестирование по пройденному материалу
-                            </li>
-                            <li style="list-style-type: square;">
-                                Теория химчистки, знакомство с оборудованием и расходным материалами, технологией, элементами экстерьера и правилами работы
-                            </li>
-                            <li style="list-style-type: square;">
-                                Структура этапов работы
-                            </li>
-                            <li style="list-style-type: square;">
-                                Удаление трудных пятен с пластика, кожи, текстиля и др.
-                            </li>
-                            <li style="list-style-type: square;">
-                                Секреты работы с наппой и алькантарой
-                            </li>
-                            <li style="list-style-type: square;">
-                                Нюансы работы с салонами премиальных авто
-                            </li>
-                            <li style="list-style-type: square;">
-                                Практическая часть, удаление простых загрязнений всеми типами оборудования с разных Элементов салона. Правила сбора и разбора
-                                салона.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m4 l4">
-                        <h4>
-                            День 4:
-                        </h4>
-                        <ul class="">
-                            <li style="list-style-type: square;">
-                                Продолжительность обучения: 5 часов
-                            </li>
-                            <li style="list-style-type: square;">
-                                Тестирование по пройденному материалу
-                            </li>
-                            <li style="list-style-type: square;">
-                                Обзор дополнительных услуг и варианты подключения на аутсорс
-                            </li>
-                            <li style="list-style-type: square;">
-                                Нанесение защитных составов на элементы экстерьера и интерьера. Подробный разбор различий материалов. Типы и практика применения.
-                                Подготовка, правила нанесения и выдерживания материалов
-                            </li>
-                            <li style="list-style-type: square;">
-                                Обзор керамических покрытий, жидкого стекла. Правила нанесения и технологии
-                            </li>
-                            <li style="list-style-type: square;">
-                                Практика – закрепление полученных знаний
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h4>
-                            День 5:
-                        </h4>
-                        <ul class="">
-                            <li style="list-style-type: square;">
-                                Продолжительность обучения: 5 часов
-                            </li>
-                            <li style="list-style-type: square;">
-                                Тестирование по пройденному материалу
-                            </li>
-                            <li style="list-style-type: square;">
-                                Открытие студии. Определение самых маржинальных услуг
-                            </li>
-                            <li style="list-style-type: square;">
-                                Создание списка закупки. Самые необходимые материалы и оборудование
-                            </li>
-                            <li style="list-style-type: square;">
-                                Старт студии. Необходимые вложения и направления в продвижении.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col s12 m4 l4">
-                        <h4>
-                            Вручение сертификатов
-                            <!-- об окончании курса участникам -->
-                        </h4>
-                        <ul class="">
-                            <li style="list-style-type: square;">
-                                Тестирование по пройденному материалу
-                            </li>
-                            <li style="list-style-type: square;">
-                                Открытие студии. Определение самых маржинальных услуг
-                            </li>
-                            <li style="list-style-type: square;">
-                                Создание списка закупки. Самые необходимые материалы и оборудование
-                            </li>
-                            <li style="list-style-type: square;">
-                                Старт студии. Необходимые вложения и направления в продвижении.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="divider"></div>
-    <div class="section black" id="mentor">
-        <div class="container">
-            <h2 class="center white-text hide-on-med-and-down">ВАШ ПРЕПОДАВАТЕЛЬ</h2>
-            <h4 class="center white-text hide-on-large-only">ВАШ ПРЕПОДАВАТЕЛЬ</h4>
-            <br>
-            <div class="row">
-                <div class="col s12 m6 l6">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./static/images/pavel1.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m6 l6 white-text">
-                    <div class="">
-                        <div class="container">
-                            <div class="center" style="border-bottom: 2px solid white;">
-                                <h3>Павел Кочутов</h3>
-                            </div>
-                        </div>
-                        <div class="flow-text left">
-                            <div class="left row">
-                                <div class="valign-wrapper">
-                                    <i class="material-icons col">remove</i>
-                                    <p class="col s12">
-                                        Специалист по детейлингу
-                                    </p>
-                                </div>
-                                <div class="valign-wrapper">
-                                    <i class="material-icons col">remove</i>
-                                    <p class="col s12">
-                                        Основатель проекта "Intellect"
-                                    </p>
-                                </div>
-                                <div class="valign-wrapper">
-                                    <i class="material-icons col">remove</i>
-                                    <p class="col s12">
-                                        4 года обучался в лучших детейлинг-центрах России
-                                    </p>
-                                </div>
-                                <div class="valign-wrapper">
-                                    <i class="material-icons col">remove</i>
-                                    <p class="col s12">
-                                        4 года практики от ученика до руководителя собственной студии
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="left-align">
-                                <!-- <p>Выпускник нескольких школ детейлинга</p>
-                                <p>Основатель детейлинг студии "Intellect"</p>
-                                <p>И просто человек, знающий весь процесс и все секреты этого дела!</p> -->
-                            </div>
-                        </div>
-                        <div class="right" style="font-size: medium;">
-                            <i style="display: block">
-                                "Детейлинг - это процесс, который нужно чувствовать!
-                            </i>
-                            <i style="display: block">
-                                Уважение к своей профессии это одно из самых главных качеств детейлера. Это главный секрет успеха и роста"
-                            </i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="divider"></div>
-    <div class="section container" id="buy">
-        <div class="center row">
-            <h3 class="black-text hide-on-med-and-down">СТОИМОСТЬ ОБУЧЕНИЯ</h3>
-            <h4 class="black-text hide-on-large-only">СТОИМОСТЬ ОБУЧЕНИЯ</h4>
-            <div class="col s12 m4 l4 offset-m4 offset-l4">
-                <h3 style="text-decoration:line-through">38 000 р.</h3>
-            </div>
-            <div class="col s12 m6 l6 offset-m3 offset-l3">
+    <div id="blue" class="block blue">
+        <nav class="pushpin-demo-nav pinned" data-target="blue" style="top: 0px;">
+            <div class="nav-wrapper light-blue">
                 <div class="container">
-                    <div class="row valign-wrapper">
-                        <h2 class="col s9 red-text">25 000 р.</h2>
-                        <a class="col s3 waves-effect waves-light btn-large red white-text text" onclick="$('#buyModal').modal('open');">Купить</a>
-                    </div>
+                    <a href="#" class="brand-logo">Blue</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a href="#!">Blue Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Blue Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Blue Link 3</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="col center valign-wrapper">
-            </div>
-        </div>
-        <div id="buyModal" class="modal">
-            <div class="modal-content">
-                <div class="center">
-                    <h3>Записаться</h3>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col s12 m6 l6 hide-on-med-and-up">
-                                <div class="flow-text">
-                                    <p>Записаться на курс и узнать подробнее можно по этой форме</p>
-                                    <p>Павел Кочутов ответит на все ваши вопросы и обучит детейлингу</p>
-                                </div>
-                            </div>
-                            <div class="col s12 m6 l6">
-                                <form id="newOrderForm" method="post">
-                                    <div class="input-field">
-                                        <label>Имя *</label>
-                                        <input class="validate" type="text" name="from_name" />
-                                    </div>
-                                    <div class="input-field">
-                                        <label for="email" data-error="Неверный формат" data-success="Введено без ошибок">Email *</label>
-                                        <input id="email" class="validate" type="email" name="email" />
-                                    </div>
-                                    <div class="input-field">
-                                        <label for="phone" data-error="Неверный формат" data-success="Введено без ошибок">Телефон *</label>
-                                        <input class="validate" type="text" name="phone" id="phone" />
-                                    </div>
-                                    <br>
-                                    <br>
-                                    <button class="left btn black">
-                                        Записаться
-                                    </button>
-                                </form>
-                            </div>
-                            <div class="col s12 m6 l6 hide-on-small-only">
-                                <div class="flow-text left">
-                                    <p>Записаться на курс и узнать подробнее можно по этой форме</p>
-                                    <p>Павел Кочутов ответит на все ваши вопросы и обучит детейлингу</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </nav>
+        <div class="divider"></div>
+        <div class="row">
+            <div class="col l12 m12 s12">
+                <h1 class="center">HELLO, WORLD</h1>
             </div>
         </div>
     </div>
-    <footer class="page-footer" id="feedback">
-        <div class="container">
-            <h3 class="center">Обратная связь</h3>
-            <br>
-            <br>
-            <div class="row center">
-                <div class="col s12 m3 l3 left">
-                    <div class="row">
-                        <div class="col s12">
-                            <h5>Телефоны</h5>
-                        </div>
-                        <div class="col s12">
-                            291 55 50
-                        </div>
-                        <div class="col s12">
-                            +7 920 018 60 63
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m3 l3 left">
-                    <div class="row">
-                        <div class="col s12">
-                            <h5>Наш адрес</h5>
-                        </div>
-                        <div class="col s12">
-                            <div class="row">
-                                <span class="col s12">603053,</span>
-                                <span class="col s12">г. Нижний Новгород,</span>
-                                <span class="col s12">ул. Переходникова, 27б </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m3 l3 left">
-                    <div class="row">
-                        <div class="col s12">
-                            <h5>Email</h5>
-                        </div>
-                        <div class="col s12">
-                            school@intellect-nn.ru
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m3 l3 left">
-                    <div class="row">
-                        <div class="col s12">
-                            <h5>Мы в соцсетях</h5>
-                        </div>
-                        <div class="col s12">
-                            <a href="https://vk.com/intellectdetailing" target="_blank">VK</a>
-                        </div>
-                        <div class="col s12">
-                            <a href="https://instagram.com/intellectdetailing" target="_blank">Instagram</a>
-                        </div>
-                    </div>
+    <div id="red" class="block red lighten-1">
+        <nav class="pushpin-demo-nav pin-top" data-target="red" style="top: 0px;">
+            <div class="nav-wrapper red">
+                <div class="container">
+                    <a href="#" class="brand-logo">Red</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a href="#!">Red Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Red Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Red Link 3</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="center">
-                    <span>
-                        &copy; Intellect, 2018, Все права защищены
-                    </span>
+        </nav>
+    </div>
+    <div id="green" class="block green lighten-1">
+        <nav class="pushpin-demo-nav pin-top" data-target="green" style="top: 0px;">
+            <div class="nav-wrapper green">
+                <div class="container">
+                    <a href="#" class="brand-logo">Green</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a href="#!">Green Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Green Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!">Green Link 3</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </footer>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script>
-        // ===== Scroll to Top ==== 
-        $(window).scroll(function () {
-            if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-                $('#return-to-top').fadeIn(200);    // Fade in the arrow
-            } else {
-                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
-            }
-        });
-        $('#return-to-top').click(function () {      // When arrow is clicked
-            $('body,html').animate({
-                scrollTop: 0                       // Scroll to top of body
-            }, 500);
-        });
-    </script>
+        </nav>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("a.scrollLink").click(function (event) {
-                event.preventDefault();
-                $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
+            $('.pushpin-demo-nav').each(function () {
+                var $this = $(this);
+                var $target = $('#' + $(this).attr('data-target'));
+                $this.pushpin({
+                    top: $target.offset().top,
+                    bottom: $target.offset().top + $target.outerHeight() - $this.height()
+                });
             });
         });
     </script>
-    <script>
-        $(document).ready(function () {
-            $('.parallax').parallax();
-        });
-        $(document).ready(function () {
-            $('.scrollspy').scrollSpy();
-        });
-        $(document).ready(function () {
-            // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-            $('.modal').modal();
-        });
-        // $(".button-collapse").sideNav();
-        $(".button-collapse").sideNav({ closeOnClick: true })
-    </script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-            (function () {
-                emailjs.init("user_oi5T0poz7ybLiJFlkukgm");
-            })();
-    </script>
-
-
-    <script>
-        var myform = $("form#newOrderForm");
-        myform.submit(function (event) {
-            event.preventDefault();
-
-            // Change to your service ID, or keep using the default service
-            var service_id = "default_service";
-            var template_id = "new_order";
-
-            if (myform.find('input[name="from_name"]').val().length === 0) {
-                return false;
-                // alert('Имя не должно быть пустым');
-            }
-
-            if (myform.find('input[name="email"]').val().length === 0) {
-                return false;
-                // alert('Email не должен быть пустым');
-            }
-            if (myform.find('input[name="email"]').val().indexOf('@') === -1) {
-                return false;
-                // alert('В Email нет символа @');
-            }
-            if (myform.find('input[name="email"]').val().split('@')[1].length === 0) {
-                return false;
-                // alert('В Email нет названия почты');
-            }
-
-            if (myform.find('input[name="phone"]').val().length === 0) {
-                return false;
-            }
-
-            // return false;
-            myform.find("button").text("Отправка...");
-            emailjs.sendForm(service_id, template_id, "newOrderForm")
-                .then(function () {
-                    Materialize.toast('Заявка успешно оставлена', 4000, 'green')
-                    myform.find("button").text("Записаться");
-                }, function (err) {
-                    Materialize.toast('Произошла ошибка, попробуйте ещё раз или проверьте сеть', 4000, 'red')
-                    myform.find("button").text("Записаться");
-                });
-
-            myform.find('input[name="from_name"]').text = '';
-            myform.find('input[name="email"]').text = '';
-            myform.find('input[name="phone"]').text = '';
-            $('#buyModal').modal('close');
-            return false;
-        });</script>
 </body>
 
 </html>
