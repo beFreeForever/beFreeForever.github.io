@@ -164,9 +164,11 @@
         <div class="container">
             <div class="container white-text center master-text class-name" style="background-color: rgba(0, 0, 0, 0.7)">
                 <div>
-                    <h1 class="center white-text hide-on-med-and-down">Донерхана</h1>
-                    <h3 class="center white-text hide-on-large-only">Донерхана</h3>
-                    <p class="flow-text">
+                    <div class="center white-text" id="master-title">
+                        <h1 class="hide-on-med-and-down">Донерхана</h1>
+                        <h3 class="hide-on-large-only">Донерхана</h3>
+                    </div>
+                    <p class="flow-text" id="subtext">
                         Доставка шаурмы и шашлыка в Нижнем Новгороде
                     </p>
                 </div>
@@ -453,6 +455,26 @@
         });
     </script>
     <script>
+        $(document).ready(function () {
+            let options = [
+                {
+                    selector: '#master-title',
+                    offset: 300,
+                    callback: function (el) {
+                        Materialize.fadeInImage($(el));
+                    }
+                },
+                {
+                    selector: '#subtext',
+                    offset: 300,
+                    callback: function (el) {
+                        Materialize.fadeInImage($(el));
+                    }
+                }
+            ];
+
+            Materialize.scrollFire(options);
+        });
         // function scrollToAnchor(aid) {
         //     var aTag = $("a[name='" + aid + "']");
         //     $('html,body').animate({ scrollTop: aTag.offset().top }, 'slow');
@@ -466,7 +488,7 @@
     <script>
         $(".button-collapse").sideNav({ closeOnClick: true });
         $(document).ready(function () {
-            $('.scrollspy').scrollSpy();
+            $('.scrollspy').scrollSpy({ scrollOffset: 300 });
         });
     </script>
 </body>
