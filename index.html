@@ -114,7 +114,7 @@
 
     <!-- nav-bar -->
     <div>
-        <div class="navbar-fixed hide-on-med-and-down">
+        <div class="navbar-fixed hide-on-med-and-down" id="navbar-desktop">
             <nav>
                 <div class="nav-wrapper white">
                     <div class="row center">
@@ -128,7 +128,7 @@
                 </div>
             </nav>
         </div>
-        <nav class="white hide-on-large-only">
+        <nav class="white hide-on-large-only" id="navbar-mobile">
             <div class="navbar-text">
                 <ul id="slide-out" class="side-nav">
                     <li>
@@ -488,7 +488,11 @@
     <script>
         $(".button-collapse").sideNav({ closeOnClick: true });
         $(document).ready(function () {
-            $('.scrollspy').scrollSpy({ scrollOffset: 50 });
+            if ($('#navbar-desktop').css('display') === 'none') {
+                $('.scrollspy').scrollSpy({ scrollOffset: 0 });         //mobile
+            } else {
+                $('.scrollspy').scrollSpy({ scrollOffset: 50 });        //desktop
+            }
         });
     </script>
 </body>
