@@ -234,8 +234,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col l1 m2 offset-m6 offset-l4 bottom" id="to-shopping">
-                    <a href="#lavash" class="center">
+                <div class="col l1 m1 offset-m5 offset-l4 bottom center" id="to-shopping">
+                    <a href="#lavash">
                         <i class="material-icons white-text medium">
                             arrow_drop_down_circle
                         </i>
@@ -517,8 +517,6 @@
 
         initBacket();
 
-        addInBacket('соус шашлычный');
-
         function initBacket() {
             function buildProduct(name) {
                 return {
@@ -622,7 +620,7 @@
             return count;
         }
 
-        function removeBacket(name) {
+        function removeFromBacket(name) {
             let offers = JSON.parse(localStorage.getItem('offers'));
 
             function removeitem(name, price) {
