@@ -74,6 +74,57 @@
             top: 5px;
         }
 
+        #basket {
+            position: fixed;
+            top: 17%;
+            right: 4%;
+            background: rgb(255, 255, 255);
+            background: rgba(255, 255, 255, 0.7);
+            width: 120px;
+            height: 120px;
+            display: block;
+            text-decoration: none;
+            -webkit-border-radius: 120px;
+            -moz-border-radius: 120px;
+            border-radius: 120px;
+            /* display: none; */
+            -webkit-transition: all 0.3s linear;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            z-index: 10000;
+        }
+
+        #basket span {
+            position: absolute;
+            top: 80%;
+            right: 0%;
+            font-size: 130%;
+            background: #ef5350 ;
+            color: white;
+            width: 30%;
+            height: 30%;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 50%;
+            box-shadow: 0 0 1px #333;
+        }
+
+        #basket i {
+            color: black;
+            margin: 0;
+            position: relative;
+            left: 21%;
+            top: 24%;
+            font-size: 500%;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
         .master-image {
             background-image: url('./static/master.jpg');
             background-size: cover;
@@ -110,6 +161,13 @@
         <i class="material-icons">
             navigation
         </i>
+    </a>
+
+    <a id="basket">
+        <i class="material-icons">
+            shopping_cart
+        </i>
+        <span>23</span>
     </a>
 
     <!-- nav-bar -->
