@@ -75,6 +75,7 @@
         }
 
         #basket {
+            cursor: pointer;
             position: fixed;
             top: 15%;
             right: 4%;
@@ -84,12 +85,12 @@
             background-color: rgba(226, 226, 226, 0.7); */
             width: 120px;
             height: 120px;
-            display: block;
+            /* display: none; */
             text-decoration: none;
             -webkit-border-radius: 120px;
             -moz-border-radius: 120px;
             border-radius: 120px;
-            /* display: none; */
+            /* visibility: hidden; */
             -webkit-transition: all 0.3s linear;
             -moz-transition: all 0.3s ease;
             -ms-transition: all 0.3s ease;
@@ -158,19 +159,55 @@
     </style>
 </head>
 
-<body>
+<body onload="initBacket();">
     <a href="javascript:" id="return-to-top">
         <i class="material-icons">
             navigation
         </i>
     </a>
 
-    <a id="basket">
+    <a id="basket" onclick="$('#openedBasket').modal('open');">
         <i class="material-icons">
             shopping_cart
         </i>
-        <span>23</span>
+        <span id="counter"></span>
     </a>
+
+    <div id="openedBasket" class="modal">
+        <div class="modal-content">
+            <div class="container center">
+                <h4>Ваш заказ</h4>
+                <div class="divider"></div>
+
+                <table class="highlight">
+                    <!-- <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Item Name</th>
+                            <th>Item Price</th>
+                        </tr>
+                    </thead> -->
+
+                    <tbody>
+                        <tr>
+                            <td>Alvin</td>
+                            <td>$0.87</td>
+                            <td>
+                                <a href="#!" class="secondary-content">
+                                    <i class="material-icons">delete</i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="divider"></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
 
     <!-- nav-bar -->
     <div>
@@ -263,7 +300,7 @@
                             </div>
                         </div>
                         <div class="card-action center">
-                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                            <a class="waves-effect waves-light btn deep-orange lighten-1" onclick="addInBacket('шаурма лаваш с курицей');">Заказать</a>
                         </div>
                     </div>
                 </div>
@@ -279,14 +316,13 @@
                             </div>
                         </div>
                         <div class="card-action center">
-                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                            <a class="waves-effect waves-light btn deep-orange lighten-1" onclick="addInBacket('шаурма лаваш со свининой');">Заказать</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div id="lepeshka" class="section scrollspy">
         <div class="section deep-orange lighten-1">
             <h2 class="center">ШАУРМА В ЛЕПЁШКЕ</h2>
@@ -305,7 +341,7 @@
                             </div>
                         </div>
                         <div class="card-action center">
-                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                            <a class="waves-effect waves-light btn deep-orange lighten-1" onclick="addInBacket('шаурма лепешка с курицей');">Заказать</a>
                         </div>
                     </div>
                 </div>
@@ -321,14 +357,13 @@
                             </div>
                         </div>
                         <div class="card-action center">
-                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                            <a class="waves-effect waves-light btn deep-orange lighten-1" onclick="addInBacket('шаурма лепешка со свининой');">Заказать</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div id="shashlyk" class="section scrollspy">
         <div class="section deep-orange lighten-1">
             <h2 class="center">ШАШЛЫК</h2>
@@ -347,7 +382,7 @@
                             </div>
                         </div>
                         <div class="card-action center">
-                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                            <a class="waves-effect waves-light btn deep-orange lighten-1" onclick="addInBacket('шашлык из курицы');">Заказать</a>
                         </div>
                     </div>
                 </div>
@@ -363,7 +398,7 @@
                             </div>
                         </div>
                         <div class="card-action center">
-                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                            <a class="waves-effect waves-light btn deep-orange lighten-1" onclick="addInBacket('шашлык из свиной шейки');">Заказать</a>
                         </div>
                     </div>
                 </div>
@@ -379,7 +414,7 @@
                             </div>
                         </div>
                         <div class="card-action center">
-                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                            <a class="waves-effect waves-light btn deep-orange lighten-1" onclick="addInBacket('люля-кебаб из свинины');">Заказать</a>
                         </div>
                     </div>
                 </div>
@@ -395,7 +430,7 @@
                             </div>
                         </div>
                         <div class="card-action center">
-                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                            <a class="waves-effect waves-light btn deep-orange lighten-1" onclick="addInBacket('куриные крылышки');">Заказать</a>
                         </div>
                     </div>
                 </div>
@@ -420,7 +455,7 @@
                             </div>
                         </div>
                         <div class="card-action center">
-                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                            <a class="waves-effect waves-light btn deep-orange lighten-1" onclick="addInBacket('картофель на шампуре');">Заказать</a>
                         </div>
                     </div>
                 </div>
@@ -436,7 +471,7 @@
                             </div>
                         </div>
                         <div class="card-action center">
-                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                            <a class="waves-effect waves-light btn deep-orange lighten-1" onclick="addInBacket('грибы на шампуре');">Заказать</a>
                         </div>
                     </div>
                 </div>
@@ -461,7 +496,7 @@
                             </div>
                         </div>
                         <div class="card-action center">
-                            <a href="#" class="waves-effect waves-light btn deep-orange lighten-1">Заказать</a>
+                            <a class="waves-effect waves-light btn deep-orange lighten-1" onclick="addInBacket('соус шашлычный');">Заказать</a>
                         </div>
                     </div>
                 </div>
@@ -496,7 +531,6 @@
             </div>
         </div>
     </div>
-    </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
@@ -514,10 +548,22 @@
             }, 500);
         });
 
-
-        initBacket();
-
         function initBacket() {
+            let count = getCount();
+            if (count == 0) {
+                // $('#counter'.)
+                console.log('asd')
+                // console.log($('#basket')[0].setAttribute('display', 'none'));
+                // console.log($('#basket')[0].setAttribute('display', 'none'));
+                init();
+                $('#basket')[0].setAttribute('visibility', 'hidden');
+            } else {
+                $('#basket')[0].setAttribute('visibility', 'visible');
+                $('#counter')[0].textContent = count;
+            }
+        }
+
+        function init() {
             function buildProduct(name) {
                 return {
                     name,
@@ -535,7 +581,7 @@
                     buildProduct('шаурма лепешка со свининой'),
 
                     buildProduct('шашлык из курицы'),
-                    buildProduct('шашлык из свинной шейки'),
+                    buildProduct('шашлык из свиной шейки'),
                     buildProduct('люля-кебаб из свинины'),
                     buildProduct('куриные крылышки'),
 
@@ -545,10 +591,9 @@
                     buildProduct('соус шашлычный'),
                 ]));
             }
-
         }
 
-        function addInBacket(name) {
+        function add(name) {
             let offers = JSON.parse(localStorage.getItem('offers'));
 
             function addItem(name, price) {
@@ -582,8 +627,8 @@
                     addItem('шашлык из курицы', 80);
                     break;
 
-                case 'шашлык из свинной шейки':
-                    addItem('шашлык из свинной шейки', 90);
+                case 'шашлык из свиной шейки':
+                    addItem('шашлык из свиной шейки', 90);
                     break;
 
                 case 'люля-кебаб из свинины':
@@ -610,7 +655,7 @@
             localStorage.setItem('offers', JSON.stringify(offers));
         }
 
-        function getCountBacket() {
+        function getCount() {
             let offers = JSON.parse(localStorage.getItem('offers'));
             let count = 0;
             for (let i = 0; i < offers.length; i++) {
@@ -620,7 +665,7 @@
             return count;
         }
 
-        function removeFromBacket(name) {
+        function remove(name) {
             let offers = JSON.parse(localStorage.getItem('offers'));
 
             function removeitem(name, price) {
@@ -686,6 +731,38 @@
             localStorage.setItem('offers', JSON.stringify(offers));
         }
 
+        function addInBacket(name) {
+            let count = getCount();
+
+            if (count > 99) {
+                Materialize.toast('Нельзя добавлять столько продуктов', 1500, 'rounded red');
+                return;
+            }
+
+            add(name);
+            count = getCount();
+            Materialize.toast('Продукт добавлен в корзину', 1500, 'rounded green');
+
+            if (count > 0) {
+                $('#basket')[0].setAttribute('visibility', 'visible');
+                $('#counter')[0].textContent = count;
+            }
+        }
+
+        function removeFromBacket(name) {
+            let count = getCount();
+            console.log(count);
+            if (count > 0) {
+                remove(name);
+            }
+            count = getCount();
+            if (count === 0) {
+                $('#counter')[0].textContent = count;
+                $('#basket')[0].setAttribute('display', 'none');
+            } else {
+                $('#counter')[0].textContent = count;
+            }
+        }
     </script>
     <script>
         $(document).ready(function () {
@@ -716,6 +793,11 @@
             } else {
                 $('.scrollspy').scrollSpy({ scrollOffset: 50 });        //desktop
             }
+        });
+
+        $(document).ready(function () {
+            // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
         });
     </script>
 </body>
