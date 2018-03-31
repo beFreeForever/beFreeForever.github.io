@@ -230,3 +230,16 @@ function deleteAll (name){
     }
     localStorage.setItem('offers', JSON.stringify(oldOffers));
 }
+
+function getTotalPrice(){
+    let offers = JSON.parse(localStorage.getItem('offers'));
+    if (!offers) {
+        return 0;
+    }
+    let price = 0;
+    for (let i = 0; i < offers.length; i++) {
+        price += offers[i].totalPrice;
+    }
+
+    return price;
+}

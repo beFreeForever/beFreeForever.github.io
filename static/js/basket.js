@@ -79,9 +79,9 @@ function createListOffers() {
         $('#listOffers').empty();
         for (let i = 0; i < offers.length; i++) {
             if (offers[i].count > 0) {
-                // console.log(createRow(offers[i]))
                 $('#listOffers').append(createRow(offers[i]))
             }
         }
     }
+    $('#totalPrice').text(`Итого: ${getTotalPrice()} р.`);
 }
