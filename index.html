@@ -129,7 +129,7 @@
         }
 
         .master-image {
-            background-image: url('./static/master.jpg');
+            background-image: url('./static/images/master.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             height: 100%;
@@ -291,7 +291,7 @@
                 <div class="col s12 m6 l6">
                     <div class="card">
                         <div class="card-image">
-                            <img src="static/1.jpg">
+                            <img src="static/images/1.jpg">
                         </div>
                         <div class="card-content">
                             <div class="center">
@@ -307,7 +307,7 @@
                 <div class="col s12 m6 l6">
                     <div class="card">
                         <div class="card-image">
-                            <img src="static/2.jpg">
+                            <img src="static/images/2.jpg">
                         </div>
                         <div class="card-content">
                             <div class="center">
@@ -332,7 +332,7 @@
                 <div class="col s12 m6 l6">
                     <div class="card">
                         <div class="card-image">
-                            <img src="static/3.jpg">
+                            <img src="static/images/3.jpg">
                         </div>
                         <div class="card-content">
                             <div class="center">
@@ -348,7 +348,7 @@
                 <div class="col s12 m6 l6">
                     <div class="card">
                         <div class="card-image">
-                            <img src="static/4.jpg">
+                            <img src="static/images/4.jpg">
                         </div>
                         <div class="card-content">
                             <div class="center">
@@ -373,7 +373,7 @@
                 <div class="col s12 m6 l6">
                     <div class="card">
                         <div class="card-image">
-                            <img src="static/5.jpg">
+                            <img src="static/images/5.jpg">
                         </div>
                         <div class="card-content">
                             <div class="center">
@@ -389,7 +389,7 @@
                 <div class="col s12 m6 l6">
                     <div class="card">
                         <div class="card-image">
-                            <img src="static/6.jpg">
+                            <img src="static/images/6.jpg">
                         </div>
                         <div class="card-content">
                             <div class="center">
@@ -405,7 +405,7 @@
                 <div class="col s12 m6 l6">
                     <div class="card">
                         <div class="card-image">
-                            <img src="static/7.jpg">
+                            <img src="static/images/7.jpg">
                         </div>
                         <div class="card-content">
                             <div class="center">
@@ -421,7 +421,7 @@
                 <div class="col s12 m6 l6">
                     <div class="card">
                         <div class="card-image">
-                            <img src="static/8.jpg">
+                            <img src="static/images/8.jpg">
                         </div>
                         <div class="card-content">
                             <div class="center">
@@ -446,7 +446,7 @@
                 <div class="col s12 m6 l6">
                     <div class="card">
                         <div class="card-image">
-                            <img src="static/9.jpg">
+                            <img src="static/images/9.jpg">
                         </div>
                         <div class="card-content">
                             <div class="center">
@@ -462,7 +462,7 @@
                 <div class="col s12 m6 l6">
                     <div class="card">
                         <div class="card-image">
-                            <img src="static/10.jpg">
+                            <img src="static/images/10.jpg">
                         </div>
                         <div class="card-content">
                             <div class="center">
@@ -487,7 +487,7 @@
                 <div class="col s12 m6 l6 offset-m3 offset-l3">
                     <div class="card">
                         <div class="card-image">
-                            <img src="static/11.jpg">
+                            <img src="static/images/11.jpg">
                         </div>
                         <div class="card-content">
                             <div class="center">
@@ -534,272 +534,10 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script>
-        $(window).scroll(function () {
-            if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-                $('#return-to-top').fadeIn(200);    // Fade in the arrow
-            } else {
-                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
-            }
-        });
-        $('#return-to-top').click(function () {      // When arrow is clicked
-            $('body,html').animate({
-                scrollTop: 0                       // Scroll to top of body
-            }, 500);
-        });
-
-        function initBacket() {
-            let count = getCount();
-            if (count == 0) {
-                // $('#counter'.)
-                console.log('asd')
-                // console.log($('#basket')[0].setAttribute('display', 'none'));
-                // console.log($('#basket')[0].setAttribute('display', 'none'));
-                init();
-                $('#basket')[0].setAttribute('visibility', 'hidden');
-            } else {
-                $('#basket')[0].setAttribute('visibility', 'visible');
-                $('#counter')[0].textContent = count;
-            }
-        }
-
-        function init() {
-            function buildProduct(name) {
-                return {
-                    name,
-                    count: 0,
-                    totalPrice: 0
-                }
-            }
-
-            if (!localStorage.getItem('offers')) {
-                localStorage.setItem('offers', JSON.stringify([
-                    buildProduct('шаурма лаваш с курицей'),
-                    buildProduct('шаурма лаваш со свининой'),
-
-                    buildProduct('шаурма лепешка с курицей'),
-                    buildProduct('шаурма лепешка со свининой'),
-
-                    buildProduct('шашлык из курицы'),
-                    buildProduct('шашлык из свиной шейки'),
-                    buildProduct('люля-кебаб из свинины'),
-                    buildProduct('куриные крылышки'),
-
-                    buildProduct('картофель на шампуре'),
-                    buildProduct('грибы на шампуре'),
-
-                    buildProduct('соус шашлычный'),
-                ]));
-            }
-        }
-
-        function add(name) {
-            let offers = JSON.parse(localStorage.getItem('offers'));
-
-            function addItem(name, price) {
-                for (let i = 0; i < offers.length; i++) {
-                    if (name === offers[i].name) {
-                        offers[i].count++;
-                        offers[i].totalPrice += price;
-                        break;
-                    }
-                }
-            }
-
-            switch (name) {
-                case 'шаурма лаваш с курицей':
-                    addItem('шаурма лаваш с курицей', 90);
-                    break;
-
-                case 'шаурма лаваш со свининой':
-                    addItem('шаурма лаваш со свининой', 100);
-                    break;
-
-                case 'шаурма лепешка с курицей':
-                    addItem('шаурма лепешка с курицей', 90);
-                    break;
-
-                case 'шаурма лепешка со свининой':
-                    addItem('шаурма лепешка со свининой', 100);
-                    break;
-
-                case 'шашлык из курицы':
-                    addItem('шашлык из курицы', 80);
-                    break;
-
-                case 'шашлык из свиной шейки':
-                    addItem('шашлык из свиной шейки', 90);
-                    break;
-
-                case 'люля-кебаб из свинины':
-                    addItem('люля-кебаб из свинины', 80);
-                    break;
-
-                case 'куриные крылышки':
-                    addItem('куриные крылышки', 90);
-                    break;
-
-                case 'картофель на шампуре':
-                    addItem('картофель на шампуре', 60);
-                    break;
-
-                case 'грибы на шампуре':
-                    addItem('грибы на шампуре', 120);
-                    break;
-
-                case 'соус шашлычный':
-                    addItem('соус шашлычный', 25);
-                    break;
-            }
-
-            localStorage.setItem('offers', JSON.stringify(offers));
-        }
-
-        function getCount() {
-            let offers = JSON.parse(localStorage.getItem('offers'));
-            let count = 0;
-            for (let i = 0; i < offers.length; i++) {
-                count += offers[i].count;
-            }
-
-            return count;
-        }
-
-        function remove(name) {
-            let offers = JSON.parse(localStorage.getItem('offers'));
-
-            function removeitem(name, price) {
-                for (let i = 0; i < offers.length; i++) {
-                    if (name === offers[i].name) {
-                        if (offers[i].count > 0) {
-                            offers[i].count--;
-                        }
-                        if (offers[i].totalPrice > 0) {
-                            offers[i].totalPrice -= price;
-                        }
-                        break;
-                    }
-                }
-            }
-
-            switch (name) {
-                case 'шаурма лаваш с курицей':
-                    removeitem('шаурма лаваш с курицей', 90);
-                    break;
-
-                case 'шаурма лаваш со свининой':
-                    removeitem('шаурма лаваш со свининой', 100);
-                    break;
-
-                case 'шаурма лепешка с курицей':
-                    removeitem('шаурма лепешка с курицей', 90);
-                    break;
-
-                case 'шаурма лепешка со свининой':
-                    removeitem('шаурма лепешка со свининой', 100);
-                    break;
-
-                case 'шашлык из курицы':
-                    removeitem('шашлык из курицы', 80);
-                    break;
-
-                case 'шашлык из свинной шейки':
-                    removeitem('шашлык из свинной шейки', 90);
-                    break;
-
-                case 'люля-кебаб из свинины':
-                    removeitem('люля-кебаб из свинины', 80);
-                    break;
-
-                case 'куриные крылышки':
-                    removeitem('куриные крылышки', 90);
-                    break;
-
-                case 'картофель на шампуре':
-                    removeitem('картофель на шампуре', 60);
-                    break;
-
-                case 'грибы на шампуре':
-                    removeitem('грибы на шампуре', 120);
-                    break;
-
-                case 'соус шашлычный':
-                    removeitem('соус шашлычный', 25);
-                    break;
-            }
-
-            localStorage.setItem('offers', JSON.stringify(offers));
-        }
-
-        function addInBacket(name) {
-            let count = getCount();
-
-            if (count > 99) {
-                Materialize.toast('Нельзя добавлять столько продуктов', 1500, 'rounded red');
-                return;
-            }
-
-            add(name);
-            count = getCount();
-            Materialize.toast('Продукт добавлен в корзину', 1500, 'rounded green');
-
-            if (count > 0) {
-                $('#basket')[0].setAttribute('visibility', 'visible');
-                $('#counter')[0].textContent = count;
-            }
-        }
-
-        function removeFromBacket(name) {
-            let count = getCount();
-            console.log(count);
-            if (count > 0) {
-                remove(name);
-            }
-            count = getCount();
-            if (count === 0) {
-                $('#counter')[0].textContent = count;
-                $('#basket')[0].setAttribute('display', 'none');
-            } else {
-                $('#counter')[0].textContent = count;
-            }
-        }
-    </script>
-    <script>
-        $(document).ready(function () {
-            let options = [
-                {
-                    selector: '#master-title',
-                    offset: 300,
-                    callback: function (el) {
-                        Materialize.fadeInImage($(el));
-                    }
-                },
-                {
-                    selector: '#subtext',
-                    offset: 300,
-                    callback: function (el) {
-                        Materialize.fadeInImage($(el));
-                    }
-                }
-            ];
-
-            Materialize.scrollFire(options);
-        });
-
-        $(".button-collapse").sideNav({ closeOnClick: true });
-        $(document).ready(function () {
-            if ($('#navbar-desktop').css('display') === 'none') {
-                $('.scrollspy').scrollSpy({ scrollOffset: 0 });         //mobile
-            } else {
-                $('.scrollspy').scrollSpy({ scrollOffset: 50 });        //desktop
-            }
-        });
-
-        $(document).ready(function () {
-            // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-            $('.modal').modal();
-        });
-    </script>
+    <script src="./static/js/localStorage.js"></script>
+    <script src="./static/js/basket.js"></script>
+    <script src="./static/js/returnToTop.js"></script>
+    <script src="./static/js/init.js"></script>
 </body>
 
 </html>
