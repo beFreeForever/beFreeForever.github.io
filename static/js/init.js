@@ -21,7 +21,8 @@ $(document).ready(function () {
     if ($('#navbar-desktop').css('display') === 'none') {
         $('.scrollspy').scrollSpy({ scrollOffset: 0 });         //mobile
     } else {
-        $('.scrollspy').scrollSpy({ scrollOffset: 50 });        //desktop
+        // $('.scrollspy').scrollSpy({ scrollOffset: 50 });        //desktop
+        $('.scrollspy').scrollSpy({ scrollOffset: 0 });
     }
 
     $('.modal').modal();
