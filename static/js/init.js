@@ -7,13 +7,13 @@ $(document).ready(function () {
                 Materialize.fadeInImage($(el));
             }
         },
-        {
-            selector: '#subtext',
-            offset: 300,
-            callback: function (el) {
-                Materialize.fadeInImage($(el));
-            }
-        }
+        // {
+        //     selector: '#subtext',
+        //     offset: 300,
+        //     callback: function (el) {
+        //         Materialize.fadeInImage($(el));
+        //     }
+        // }
     ];
 
     Materialize.scrollFire(options);
