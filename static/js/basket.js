@@ -1,14 +1,16 @@
 function initBacket() {
     let count = getCount();
+    console.log($('#basket'))
     if (count == 0) {
         // $('#counter'.)
         console.log('asd')
         // console.log($('#basket')[0].setAttribute('display', 'none'));
         // console.log($('#basket')[0].setAttribute('display', 'none'));
         init();
-        $('#basket')[0].setAttribute('visibility', 'hidden');
+        $('#basket').hide();
     } else {
-        $('#basket')[0].setAttribute('visibility', 'visible');
+        // $('#basket')[0].css('visibility', 'visible');
+        $('#basket').show();
         $('#counter')[0].textContent = count;
     }
 }

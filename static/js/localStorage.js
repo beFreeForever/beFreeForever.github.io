@@ -92,6 +92,9 @@ function add(name) {
 
 function getCount() {
     let offers = JSON.parse(localStorage.getItem('offers'));
+    if(!offers){
+        return 0;
+    }
     let count = 0;
     for (let i = 0; i < offers.length; i++) {
         count += offers[i].count;
