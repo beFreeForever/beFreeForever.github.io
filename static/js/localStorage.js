@@ -92,7 +92,7 @@ function add(name) {
 
 function getCount() {
     let offers = JSON.parse(localStorage.getItem('offers'));
-    if(!offers){
+    if (!offers) {
         return 0;
     }
     let count = 0;
@@ -141,8 +141,8 @@ function remove(name) {
             removeitem('шашлык из курицы', 80);
             break;
 
-        case 'шашлык из свинной шейки':
-            removeitem('шашлык из свинной шейки', 90);
+        case 'шашлык из свиной шейки':
+            removeitem('шашлык из свиной шейки', 90);
             break;
 
         case 'люля-кебаб из свинины':
@@ -167,4 +167,66 @@ function remove(name) {
     }
 
     localStorage.setItem('offers', JSON.stringify(offers));
+}
+
+function deleteAll (name){
+    let oldOffers = JSON.parse(localStorage.getItem('offers'));
+
+    function removeitem(name) {
+        for (let i = 0; i < oldOffers.length; i++) {
+            if (name === oldOffers[i].name) {
+                oldOffers[i].count = 0;
+                oldOffers[i].totalPrice = 0;
+                break;
+            }
+        }
+    }
+
+
+    switch (name) {
+        case 'шаурма лаваш с курицей':
+            removeitem('шаурма лаваш с курицей');
+            break;
+
+        case 'шаурма лаваш со свининой':
+            removeitem('шаурма лаваш со свининой');
+            break;
+
+        case 'шаурма лепешка с курицей':
+            removeitem('шаурма лепешка с курицей');
+            break;
+
+        case 'шаурма лепешка со свининой':
+            removeitem('шаурма лепешка со свининой');
+            break;
+
+        case 'шашлык из курицы':
+            removeitem('шашлык из курицы');
+            break;
+
+        case 'шашлык из свиной шейки':
+            removeitem('шашлык из свиной шейки');
+            break;
+
+        case 'люля-кебаб из свинины':
+            removeitem('люля-кебаб из свинины');
+            break;
+
+        case 'куриные крылышки':
+            removeitem('куриные крылышки');
+            break;
+
+        case 'картофель на шампуре':
+            removeitem('картофель на шампуре');
+            break;
+
+        case 'грибы на шампуре':
+            removeitem('грибы на шампуре');
+            break;
+
+        case 'соус шашлычный':
+            removeitem('соус шашлычный');
+            break;
+    }
+    localStorage.setItem('offers', JSON.stringify(oldOffers));
 }

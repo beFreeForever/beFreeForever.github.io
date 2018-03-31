@@ -166,7 +166,7 @@
         </i>
     </a>
 
-    <a id="basket" onclick="$('#openedBasket').modal('open');">
+    <a id="basket" onclick="createListOffers(); $('#openedBasket').modal('open');">
         <i class="material-icons">
             shopping_cart
         </i>
@@ -180,15 +180,7 @@
                 <div class="divider"></div>
 
                 <table class="highlight">
-                    <!-- <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Item Name</th>
-                            <th>Item Price</th>
-                        </tr>
-                    </thead> -->
-
-                    <tbody>
+                    <tbody id="listOffers">
                         <tr>
                             <td>Alvin</td>
                             <td>$0.87</td>
