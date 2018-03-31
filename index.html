@@ -99,6 +99,10 @@
             z-index: 998;
         }
 
+        #basket:hover{
+            content: attr('price')
+        }
+
         #basket span {
             position: absolute;
             top: 80%;
@@ -156,6 +160,21 @@
             transform: translateY(-50%) translateX(-50%);
             left: 100%;
         }
+
+        /* #basket > #hoverPrice {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            font-size: 130%;
+            background: #ef5350;
+            color: white;
+            width: 30%;
+            height: 30%;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 50%;
+            box-shadow: 0 0 1px #333;
+        } */
     </style>
 </head>
 
@@ -171,6 +190,7 @@
             shopping_cart
         </i>
         <span id="counter"></span>
+        <!-- <span id="hoverPrice">222</span> -->
     </a>
 
     <div id="openedBasket" class="modal">
@@ -182,7 +202,6 @@
                     <tbody id="listOffers">
                     </tbody>
                 </table>
-
             </div>
             <div class="divider"></div>
             <p id="totalPrice" class="flow-text"></p>
