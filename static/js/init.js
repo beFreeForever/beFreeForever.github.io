@@ -17,7 +17,7 @@ $(document).ready(function () {
     ];
 
     Materialize.scrollFire(options);
-    // $('.scrollspy').scrollSpy({ scrollOffset: 0 });
+    $('.scrollspy').scrollSpy({ scrollOffset: 0 });
     // if ($('#navbar-desktop').css('display') === 'none') {
     //     $('.scrollspy').scrollSpy({ scrollOffset: 0 });         //mobile
     // } else {
