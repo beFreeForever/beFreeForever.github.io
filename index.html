@@ -175,6 +175,10 @@
             border-radius: 50%;
             box-shadow: 0 0 1px #333;
         } */
+
+        #menu {
+            height: 100%;
+        }
     </style>
 </head>
 
@@ -213,7 +217,7 @@
     </div>
 
     <!-- nav-bar -->
-    <div>
+    <!-- <div>
         <nav class="white hide-on-large-only" id="navbar-mobile">
             <div class="navbar-text">
                 <ul id="slide-out" class="side-nav">
@@ -244,15 +248,20 @@
                 </div>
             </div>
         </nav>
-    </div>
+    </div> -->
 
-    <div class="master-image hide-on-small-only">
+    <div class="master-image valign-wrapper">
         <div class="container">
-            <div id="master-title" class="container white-text center master-text class-name" style="background-color: rgba(0, 0, 0, 0.7)">
+            <!-- <div class="container white-text center master-text " style="background-color: rgba(0, 0, 0, 0.7)"> -->
+            <div class="container white-text center master-text ">
                 <div>
                     <div class="center white-text">
-                        <h1 class="hide-on-med-and-down">Донерхана</h1>
-                        <h3 class="hide-on-large-only">Донерхана</h3>
+                        <!-- desktop -->
+                        <h1 class="hide-on-med-and-down">Донерхана</h1>                
+                        <!-- medium -->
+                        <h3 class="hide-on-small-only hide-on-large-only">Донерхана</h3>
+                        <!-- small -->
+                        <h3 class="hide-on-med-and-up">Донерхана</h3>
                     </div>
                     <p class="flow-text">
                         Доставка шаурмы и шашлыка в Нижнем Новгороде
@@ -261,8 +270,8 @@
             </div>
 
             <div class="row center">
-                <div class="col l1 m1 offset-m5 offset-l4 bottom" id="to-shopping">
-                    <a href="#navbar-desktop">
+                <div class="col l1 m1 s1 offset-s5 offset-m5 offset-l4 bottom" id="to-shopping">
+                    <a href="#menu">
                         <i class="material-icons white-text medium">
                             arrow_drop_down_circle
                         </i>
@@ -272,7 +281,7 @@
         </div>
     </div>
     <!-- <div class="navbar-fixed hide-on-med-and-down" id="navbar-desktop"> -->
-  <!--  <nav class="scrollspy hide-on-med-and-down" id="navbar-desktop">
+    <!--  <nav class="scrollspy hide-on-med-and-down" id="navbar-desktop">
         <div class="nav-wrapper white">
             <div class="row center">
                 <a href="#lavash" class="black-text col s2">Шаурма в лаваше</a>
@@ -284,31 +293,48 @@
             </div>
         </div>
     </nav>                -->
-    <div class="scrollspy" id="navbar">
+    <div class="scrollspy valign-wrapper" id="menu">
         <div class="container center">
-           <h2>Меню</h2>
-           <div class="row">
-               <ul>
-                   <li>
-                        <a href="#lavash" class="flow-text black-text" >Шаурма в лаваше</a>
-                    </li>
-                    <li>
-                        <a href="#lepeshka" class="flow-text black-text">Шаурма в лепешке</a>
-                    </li>
-                    <li>
-                        <a href="#shashlyk" class="flow-text black-text">Шашлык</a>
-                    </li>
-                    <li>
-                        <a href="#ovoschi-grill" class="flow-text black-text">Овощи гриль</a>
-                    </li>
-                    <li>
-                        <a href="#sousy" class="flow-text black-text">Соусы</a>
-                    </li>
-                    <li>
-                        <a href="#dostavka" class="flow-text black-text">Доставка и оплата</a>
-                    </li>
-               </ul>
-           </div>
+            <div class="container">
+                <h1 style="border-bottom: 2px solid black" class="hide-on-med-and-down">Меню</h1>
+                <h2 style="border-bottom: 2px solid black" class="hide-on-lagre-only">Меню</h2>
+            </div>
+            <div class=" container center">
+                <div class="row">
+                    <ul>
+                        <li style="cursor: pointer;">
+                            <p>
+                                <a href="#lavash" class="flow-text black-text">Шаурма в лаваше</a>
+                            </p>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <p>
+                                <a href="#lepeshka" class="flow-text black-text">Шаурма в лепешке</a>
+                            </p>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <p>
+                                <a href="#shashlyk" class="flow-text black-text">Шашлык</a>
+                            </p>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <p>
+                                <a href="#ovoschi-grill" class="flow-text black-text">Овощи гриль</a>
+                            </p>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <p>
+                                <a href="#sousy" class="flow-text black-text">Соусы</a>
+                            </p>
+                        </li>
+                        <li style="cursor: pointer;">
+                            <p>
+                                <a href="#dostavka" class="flow-text black-text">Доставка и оплата</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <!-- </div> -->
