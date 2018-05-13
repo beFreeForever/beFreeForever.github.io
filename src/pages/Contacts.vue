@@ -20,7 +20,28 @@
       <b-col sm="12" md="4">
         <b-row>
           <b-col>
-            <p v-for="i in 15" :key="i">asd</p>
+            <p class="text-center">Контакнтные данные</p>
+            <p>
+              Телефон бронирования:<br>
+              +7ХХХХХХХХ<br>
+              <br>
+              <br>
+              Для коммерческих предложений:<br>
+              +7ХХХХХХХХХХ<br>
+              ххххх@mail.xx<br>
+              <br>
+              <br>
+              Для прочего:<br>
+              +7ХХХХХХХХХХ<br>
+              ххххх@mail.хх<br>
+              <br>
+              <br>
+              Адреса кинотеатров:<br>
+              <br>
+              ул. Такая-то, дом Х<br>
+              ул. Другая, дом Д <br>
+              ул. Третья, дом К<br>
+            </p>
           </b-col> 
         </b-row>
       </b-col>
@@ -32,9 +53,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
