@@ -27,12 +27,20 @@
                   </b-col>
                 </b-row>
                 <br>     
+                    <!-- <b-button @click="isShowGiveCertificate = true">
+                      Подарить сертификат
+                    </b-button>
+                    <br><br>
+                    <b-button @click="isShowInvitation = true">
+                      Пригласить в кино
+                    </b-button> -->
                 <b-row>
                   <b-col>
                     <b-button @click="isShowGiveCertificate = true">
                       Подарить сертификат
                     </b-button>
                   </b-col>
+                  <br><br>
                   <b-col>
                     <b-button @click="isShowInvitation = true">
                       Пригласить в кино
@@ -84,9 +92,9 @@
           <b-row class="mb-1">
             <b-col sm="6">
               <b-form-input
-                  v-model="invite.login"
+                  v-model="invite.phone"
                   type="text"
-                  placeholder="Введите логин"/>
+                  placeholder="Введите телефон"/>
                 <br>
               </b-col>
               <b-col sm="12">
@@ -106,7 +114,7 @@
     <b-modal v-model="give.isSend" centered title="Подарить сертификат">
       <p>
         Ваше сообщение, а так же код для получения сертификата отправлены абоненту: <br>
-        {{give.login}}
+        {{give.phone}}
       </p>
       <p>
         Ваше сообщение:
@@ -124,9 +132,9 @@
          <b-row class="mb-1">
            <b-col sm="6">
              <b-form-input
-                v-model="invite.login"
+                v-model="invite.phone"
                 type="text"
-                placeholder="Введите логин"/>
+                placeholder="Введите телефон"/>
               <br>
             </b-col>
             <b-col sm="12">
@@ -146,7 +154,7 @@
     <b-modal v-model="invite.isSend" centered title="Подарить сертификат">
       <p>
         Ваше сообщение, а так же код для получения сертификата отправлены абоненту: <br>
-        {{invite.login}}
+        {{invite.phone}}
       </p>
       <p>
         Ваше сообщение:
@@ -168,12 +176,12 @@ export default {
       isShowGiveCertificate: false,
       isShowInvitation: false,
       give: {
-        login: null,
+        phone: null,
         message: null,
         isSend: false
       },
       invite: {
-        login: null,
+        phone: null,
         message: null,
         isSend: false
       }
@@ -181,7 +189,3 @@ export default {
   }
 };
 </script>
-
-<style>
-
-</style>

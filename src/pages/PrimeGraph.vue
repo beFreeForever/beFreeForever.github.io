@@ -79,13 +79,18 @@
         <br>
         <br>
         <br>
-        <b-list-group>
-          <b-list-group-item>Веном - 9.9</b-list-group-item>
-          <b-list-group-item>Дедпул 2 - 9.7</b-list-group-item>
-          <b-list-group-item>Мстители 4 - 9.0</b-list-group-item>
-          <b-list-group-item>Аквамен - 8.2</b-list-group-item>
-          <b-list-group-item>Валериан 2 - 8.1</b-list-group-item>
-        </b-list-group>
+        <b-card-group deck>
+          <b-card no-body header="<b class=`text-center`>Топ 10 ожидаемых фильмов</b>">
+            <b-list-group>
+              <b-list-group-item v-for="item in 10" :key="item">Фильм {{item}}</b-list-group-item>
+              <!-- <b-list-group-item>Веном - 9.9</b-list-group-item>
+              <b-list-group-item>Дедпул 2 - 9.7</b-list-group-item>
+              <b-list-group-item>Мстители 4 - 9.0</b-list-group-item>
+              <b-list-group-item>Аквамен - 8.2</b-list-group-item>
+              <b-list-group-item>Валериан 2 - 8.1</b-list-group-item> -->
+            </b-list-group>
+          </b-card>
+        </b-card-group>
       </b-col>
     </b-row>
   </b-container>
