@@ -35,7 +35,7 @@
               <p class="card-text">
                 Some quick example text to build on the card title and make up the bulk of the card's content.
               </p>
-              <b-button variant="second">Подробнее...</b-button>
+              <b-button variant="second" @click="$router.push('/movie')">Подробнее...</b-button>
             </b-card>
           </b-col>
         </b-row>
