@@ -70,7 +70,7 @@
                         </b-row>
                     </b-col>
                     <b-col sm="12">
-                        <iframe width="100%" src="https://www.youtube.com/embed/xFvOZAepx4I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/xFvOZAepx4I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </b-col>
                 </b-row>
             </b-col>
