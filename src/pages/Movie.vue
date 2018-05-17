@@ -74,6 +74,43 @@
                     </b-col>
                 </b-row>
             </b-col>
+            <b-col sm="12">
+                <b-tabs>
+                    <b-tab title="Ближайшие сеансы">
+                        <b-card>
+                            <b-row>
+                                <b-col sm="3">
+                                    <p v-for="item in 4" :key="item">Кинотеатр {{item}}</p>
+                                </b-col>
+                                <b-col sm="9">
+                                    <b-row v-for="item in 4" :key="item">
+                                        <b-col sm="2" v-for="item in 6" :key="item">
+                                            <p class="text-center" style="border: solid 2px black; cursor: pointer;">12:30</p>
+                                        </b-col>
+                                    </b-row>
+                                </b-col>
+                            </b-row>
+                        </b-card>
+                    </b-tab>
+                    <b-tab title="Отзывы пользователей">
+                        <b-row>
+                            <b-col sm="12" md="6"
+                                v-for="item in 5" :key="item">
+                                <b-card>
+                                    <!-- title="Имя пользователя"> -->
+                                    <p class="h4">Имя пользователя</p>
+                                    <p class="card-text">
+                                        <b>Оценка: </b> 7/10
+                                    </p>
+                                    <p class="card-text">
+                                        Описание Описание Описание Описание Описание Описание Описание Описание Описание Описание 
+                                    </p>
+                                </b-card>
+                            </b-col>
+                        </b-row>
+                    </b-tab>
+                </b-tabs>
+            </b-col>
         </b-row>
     </section>
 
